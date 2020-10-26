@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block content %} {% if event_today %}
+<section id="skills" class="skills">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Today's Events</h2>
+    </div>
+    <div class="event-container animated bounce">
+      {% for event in event_today %}
+      <div class="event">
+        <p>Name: <b>{{ event.event_name }}</b></p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <a href="{{event.reg}}">Link to register</a>
+        <br />
+        <hr />
+        <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %} {% if eventnew %}
+<section id="skills" class="skills">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Upcoming events</h2>
+    </div>
+    <div class="event-container animated bounce">
+      {% for event in eventnew %}
+      <div class="event">
+        <p>Name: <b>{{ event.event_name }}</b></p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <a href="{{event.reg}}">Link to register</a>
+        <br />
+        <hr />
+        <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %} {% if eventold %}
+<section id="skills" class="skills">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Past Events</h2>
+    </div>
+    <div class="event-container">
+      {% for event in eventold %}
+      <div class="event">
+        <p>Name: {{ event.event_name }}</p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <br />
+        <hr />
+        <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endif %} {% endblock %}

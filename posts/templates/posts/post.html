@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<div class="col mb-4">
+  <section id="skills" class="skills" style="margin-bottom: 0px">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>GALLERY OF EVENTS</h2>
+      </div>
+    </div>
+  </section>
+  <div class="container" data-aos="fade-up" style="">
+    {% for post in posts %}
+    <div class="card m-1">
+      <img
+        class="card-img-top"
+        src="{{post.Poster.url}}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+
+        <a href="{% url 'detail' post.id %}" class="btn btn-primary btn-md">
+          View Images
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+</div>

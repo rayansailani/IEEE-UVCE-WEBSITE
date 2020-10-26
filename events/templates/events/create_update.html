@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<form class="text-center border border-light p-5" action="{% url 'articles:update' %}" method="POST"
+  enctype="multipart/form-data">
+  {% csrf_token %}
+  <p class="h4 mb-4">Create an Announcement</p>
+  <p>Remember Announcements are to be made for very important messages, you can't edit them once made</p>
+  {% for field in form %}
+  <p>
+    {{field}} {% if field.help_text %}
+    <small style="color: grey">{{field.help_text}}</small>
+    {% endif %}
+  </p>
+  {% endfor %} {% for field in form %} {% for error in field.errors %}
+  <p style="color: red">{{error}}</p>
+  {% endfor %} {% endfor %} {% if form.non_field_errors %}
+  <div style="color: red">
+    <p>{{form.non_field_errors}}</p>
+  </div>
+  {% endif %}
+  <button class="btn btn-info btn-block my-4" style="background-color: #37517e;" type="submit">Create
+    Announcement</button>
+  {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="text-center border border-light p-5" action="{% url 'articles:delete' slug=item.slug %}" method="post">
+
+    {% csrf_token %}
+    <h1 style="color: white;background-color: Red;border: 2px solid white;">Are you sure you want to delete event -
+        <span style="text-decoration: underline;">{{item}}</span>
+    </h1>
+    <a href="{% url 'articles:dashboard' %}">Cancel</a>
+    <button type="submit" name='confirm' class="btn btn-info btn-block my-4" style="background-color: #37517e;">Confirm
+        Delete</button>
+
+
+    {% endblock %}

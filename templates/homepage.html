@@ -1,0 +1,398 @@
+{% extends 'base.html' %}
+{% block home %}
+<li style="display: none;"></li>
+
+<li>
+    <a href="#updates">Updates</a>
+</li>
+
+<li>
+    <a href="#fests">Fests</a>
+</li>
+
+<li>
+    <a href="{% url 'home_page' %}">SIG</a>
+</li>
+
+<li>
+    <a href="{% url 'home_page' %}">Awards</a>
+</li>
+
+
+<li><a href="{% url 'home_page' %}">Contact</a></li>
+{% endblock %}
+{% load static %}
+{% block hero %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                data-aos="fade-up" data-aos-delay="200">
+                <h1>IEEE UVCE</h1>
+                <h2>Striding Ahead!</h2>
+                <div class="d-lg-flex">
+
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video"
+                        data-vbtype="video" data-autoplay="true">
+                        Watch Video <i class="icofont-play-alt-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="{% static 'img/bg-masthead (2).webp' %}" class="img-fluid animated" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block footer %}
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Contact</h2>
+
+        </div>
+
+
+        <div class="info">
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <div class="email">
+                        <i class="icofont-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>ieeeuvce@gmail.com/p>
+                    </div>
+                    <div class="email">
+                        <i class="icofont-linkedin"></i>
+                        <h4>linkedin</h4>
+                        <p>ieeeuvce@gmail.com/p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="address">
+                        <i class="icofont-facebook"></i>
+                        <h4>Facebook</h4>
+                        <p>IEEE UVCE, KR CIRCLE BANGALORE</p>
+                    </div>
+
+                    <div class="address">
+                        <i class="icofont-instagram"></i>
+                        <h4>Instagram</h4>
+                        <p>IEEE UVCE, KR CIRCLE BANGALORE</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- <iframe src="https://g.page/uvce-karnataka?share" frameborder="0"
+                        style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
+            <!-- <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.9630270460852!2d77.58611743414656!3d12.976581321730407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1672fcfc6af1%3A0x9c2dc517c9231979!2sUVCE!5e0!3m2!1sen!2sin!4v1601372663946!5m2!1sen!2sin" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
+
+        </div>
+
+    </div>
+    <hr>
+    <div class="footer-copyright text-center py-3" data-aos="fade-up">
+        <h5><a href="mailto:kennithkoshy@ieee.org"><i class="icofont-envelope"></i> Kennith O Koshy</a></h5>
+        <h6><a target="_blank"
+                href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
+                    class="icofont-google-map"></i>
+                UVCE, K.R Circle, B.R Ambedkar Veedhi, Bengaluru </a></h6>
+        © 2020 Copyright:
+        <a href="{% url 'home_page' %}"> IEEE-UVCE</a>
+    </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+
+<!-- ======= About Us Section ======= -->
+<section id="Fests" class="Fests">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>IEEE UVCE</h2>
+        </div>
+
+        <div class="row content p-5">
+            <div class="p-2 " style="text-align: justify;">
+                <p>
+                    IEEE Student Branch of UVCE endeavors to enhance the learning experience of the student community on
+                    the UVCE campus. The Student Branch intends on providing different social, cultural and technical
+                    events for the students throughout the year. We encourage the students to take full advantage of the
+                    benefits of IEEE membership, including scholarships, competitions, and conference grants. The
+                    Student Branch also emphasizes the students to work with peers in other institutes, academicians,
+                    professionals, engineers, and scientists through the on campus IEEE Student Branch and the Local
+                    IEEE Section, thereby encouraging students to be a part of the global IEEE community.
+                </p>
+                <a href="#" class="btn-learn-more">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End About Us Section -->
+<!-- Update section  -->
+<div id="updates"></div>
+<section id="skills" class="skills">
+    <div class="container" data-aos="fade-up" style="text-align: center;margin:auto">
+
+        <div class="section-title">
+            <h2>Updates</h2>
+        </div>
+        <marquee width="100%" direction="up" height="150px">
+            {% for update in updates %}
+            <ul style="list-style-type: none;">
+                <li>
+                    <b>{{ update.title}}</b>: {{ update.Update}}
+                </li>
+            </ul>
+            {% endfor %}
+        </marquee>
+
+    </div>
+</section>
+<section id="why-us" class="why-us section-bg">
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Fests</h2>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                <div class="content">
+
+                    <h3>Our Flagship events</strong></h3>
+
+                </div>
+
+                <div class="accordion-list">
+                    <ul>
+                        <li>
+                            <a data-toggle="collapse" class="collapse" href="#accordion-list-1">
+                                IMPETUS<i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list"
+                                style="text-align: justify;">
+                                <p>
+                                    Impetus is an Annual National level technical fest conducted by IEEE UVCE.
+                                    The fest is preceded by curtain raisers which include workshops, seminars and fun
+                                    events.
+                                    It is based on different innovative themes every year and sees a footfall of about
+                                    1000 students from all over the
+                                    state.
+                                    About 20 events are conducted among which Summit, Mock placements, Lazer Tag and
+                                    Codestorm attract most crowd.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-2" class="collapsed">
+                                KAGADA <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-2" class="collapse" data-parent=".accordion-list"
+                                style="text-align: justify;">
+                                <p>
+
+
+                                    KAGADA is the Annual National level Technical Paper Presentation competition
+                                    organized by IEEE UVCE.
+                                    Categories for Paper Presentation: UG/PG and WIE.
+                                    In addition to Paper presentation, Project and Poster presentation contests are also
+                                    conducted.
+                                    'Ottige Kaliyona' - An initiative for government school children is also organised.
+
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a data-toggle="collapse" href="#accordion-list-3" class="collapsed">
+                                CODEFURY<i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-3" class="collapse" data-parent=".accordion-list"
+                                style="text-align: justify;">
+                                <p>
+                                    "CodeFury 2.0" is a National level Hackathon which will draw participants from all
+                                    over India. The main task of the
+                                    Hackathon is to create a Web or Android Application related to the given problem
+                                    domain. The problem domain would be
+                                    given on the spot.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div loading="lazy" class="col-lg-4 align-items-stretch order-1 order-lg-2 img p-3 m-3"
+                style='background-image: url("{% static 'img/ieeebanner1 (1).webp' %}");' data-aos="zoom-in"
+                data-aos-delay="150">
+                &nbsp;</div>
+        </div>
+
+    </div>
+</section>
+<!-- End Why Us Section -->
+
+<!-- ======= Skills Section ======= -->
+<section id="skills" class="skills">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Special Interest Groups</h2>
+        </div>
+
+    </div>
+
+
+</section>
+<!-- End Skills Section -->
+
+<!-- ======= Awards Section ======= -->
+<section id="Awards" class="Awards section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Awards and Recognition</h2>
+            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                ea. Quia fugiat sit in iste officiis commodi
+                quidem hic quas.</p> -->
+        </div>
+        <!-- <div class="col-lg-4 align-items-stretch order-1 order-lg-2 img"
+            style="background-image: url('{% static 'img/ieeeawards.jpg' %}')" data-aos="zoom-in" data-aos-delay="150">
+            &nbsp;</div> -->
+        <img class='center-block' style="max-width:100%; border:2px solid black;" loading="lazy"
+            src="{% static 'img/ieeeawards (1).webp' %}" alt="">
+
+    </div>
+</section>
+
+<!-- End Awards Section -->
+
+<section class="team-section text-center my-5">
+
+    <!-- Section heading -->
+    <div class="section-title">
+        <h2>Faculty</h2>
+    </div>
+    <!-- Section description -->
+
+    <div class="row text-center p-5">
+        <div class="col-md-8 mx-auto">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\pds1.webp' %}" class="rounded z-depth-1-half "
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4 font-weight-bold">Dr.P Deepa Shenoy</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Adviser</strong></h6>
+        </div>
+    </div>
+    <!-- Grid row -->
+    <div class="row text-center">
+        <div class="col-md-4 mb-md-0 mb-5">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\venugopal.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. K R venugopal</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Patron</strong></h6>
+
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-2">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\kiran.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. Kiran K</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Councellor</strong></h6>
+
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-5">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\pushpa.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. Pushpa C N</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>WIE Mentor</strong></h6>
+
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-5">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\veena.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Prof. H S Veena</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>PES Advisor</strong></h6>
+
+        </div>
+        <div class="col-md-4 mb-md-0 mb-5">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\latha.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. Lata B T</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Mentor</strong></h6>
+
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-5">
+            <div class="avatar mx-auto">
+                <img loading="lazy" src="{% static 'img\teachers\venkatesh.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
+            </div>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. Venkatesh M</h4>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Mentor</strong></h6>
+
+        </div>
+
+
+</section>
+<section id="why-us" class="why-us section-bg" data-aos="fade-up">
+    <div class="section-title">
+        <h2>Quick Links</h2>
+    </div>
+    <div class="text-center xl">
+        <a href="">WIECON 2019</a>
+        | <a href="">IEEE XTREME</a>
+    </div>
+    <div class="text-center xl">
+        <a href="">IEEE Spectrum</a>
+        | <a href="">IEEE Xplore</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="">IEEE Collabratec</a>
+        | <a href="">IEEE Newsroom</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="">IEEE Standards University</a>
+        <a href="">IEEE Certificates Program</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="">Computer Society</a>
+        | <a href="">Region 10</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="">India Council</a>
+        | <a href="">Bangalore Section</a>
+    </div>
+
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+<section id="skills" class="skills" style="margin-bottom: 0px">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>GALLERY</h2>
+    </div>
+  </div>
+</section>
+<div class="flex-container">
+  {% for p in photos %}
+  <a
+    class="galitem"
+    href="{{ p.image.url }}"
+    data-toggle="modal"
+    data-target="#myModal{{p.id}}"
+  >
+    <img
+      src="{{ p.image.url }}"
+      alt=""
+      style="max-height: 100%; max-width: 90%; display: inline"
+    />
+  </a>
+  <div
+    class="modal fade"
+    id="myModal{{p.id}}"
+    style="position: absolute; top: 100px"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img src="{{ p.image.url }}" alt="" style="max-width: 100%" />
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

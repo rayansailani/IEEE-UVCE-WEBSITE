@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block content %}
+
+<form
+  class="text-center border border-light p-5"
+  action="{% url 'articles:create' %}"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <p class="h4 mb-4">Register an Event</p>
+  {% csrf_token %} {% for field in form %}
+  <p>
+    {{field}} {% if field.help_text %}
+    <small style="color: grey">{{field.help_text}}</small>
+    {% endif %}
+  </p>
+  {% endfor %} {% for field in form %} {% for error in field.errors %}
+  <p style="color: red">{{error}}</p>
+  {% endfor %} {% endfor %} {% if form.non_field_errors %}
+  <div style="color: red">
+    <p>{{form.non_field_errors}}</p>
+  </div>
+  {% endif %}
+  <div class="d-flex justify-content-around"></div>
+  <p>
+    * Once an event is registered, it must be approved by an other SIG member.
+    This approval involves checking of all types of factual information and
+    errors.
+  </p>
+  <button
+    class="btn btn-info btn-block my-4"
+    type="submit"
+    style="background-color: #37517e"
+  >
+    Register this Event
+  </button>
+</form>
+<!-- Default form login -->
+<!-- JavaScript to ensure the slugs are filled properly -->
+<script>
+  const titleInput = document.querySelector("input[name=event_name]");
+  const slugInput = document.querySelector("input[name=slug]");
+
+  const slugify = (val) => {
+    return val
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/&/g, "-and-") // Replace & with 'and'
+      .replace(/[\s\W-]+/g, "-"); // Replace spaces, non-word characters and dashes with a single dash (-)
+  };
+
+  titleInput.addEventListener("keyup", (e) => {
+    slugInput.setAttribute("value", slugify(titleInput.value));
+  });
+</script>
+{% endblock %}

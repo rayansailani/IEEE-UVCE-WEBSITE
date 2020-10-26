@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<section id="skills" class="skills" style="margin: 0px">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>USER DETAILS</h2>
+    </div>
+  </div>
+</section>
+<div class="col-sm-6 col-md-4 user" data-aos="fade-up">
+  <div class="div-box">
+    <h3 class="User-name">Name: {{request.user.username}}</h3>
+    <h3 class="User-name">Email: {{request.user.email }}</h3>
+    <h3 class="User-name">
+      {% if request.user.membership_id != ' ' %} IEEE membership ID:
+      {{request.user.membership_no}} {% endif %}
+    </h3>
+    <h4 class="designation" style="padding: 16px">
+      {% if request.user.is_sig_head %} SIG MEMBER{% else %} Student {% endif %}
+    </h4>
+  </div>
+</div>
+{% endblock %}

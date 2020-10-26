@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% block content %}
+
+<section id="skills" class="skills text-center border border-light p-5">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title pb-3">
+      <h2>SIG DASHBOARD</h2>
+    </div>
+  </div>
+</section>
+<div class="col-sm-6 col-md-4 user" data-aos="fade-up">
+  <div class="div-box">
+    <h3 class="User-name">Name: {{request.user.username}}</h3>
+    <h3 class="User-name">Email: {{request.user.email }}</h3>
+    <h3 class="User-name">
+      {% if request.user.membership_id != ' ' %} IEEE membership ID:
+      {{request.user.membership_no}} {% endif %}
+    </h3>
+    <h4 class="designation" style="padding: 16px">
+      {% if request.user.is_sig_head %} SIG MEMBER{% else %} Student {% endif %}
+    </h4>
+    <div class="profile-details">
+      <ul>
+        <li>
+          <a href="{% url 'articles:create' %}"></i> Create an Event</a>
+        </li>
+        <li>
+          <a href="{% url 'articles:update' %}"></i> Create an Announcement</a>
+        </li>
+        <li>
+          <a href="{% url 'createPost' %}"></i>Add Images to the Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% if approval %}
+<section id="skills" class="skills">
+  <div class="container" data-aos="fade-up">
+    <div class="text-center pb-3">
+      <h2>Events Waiting for Approval</h2>
+    </div>
+    <div class="event-container">
+      {% for event in approval %}
+      <div class="event">
+        <p>Name: {{ event.event_name }}</p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <br />
+        <hr />
+        <a
+          href="{% url 'articles:detail' slug=event.slug %}"
+          class="btn btn-primary"
+          >More info</a
+        >
+        <a
+          href="{% url 'articles:delete' slug=event.slug %}"
+          class="btn btn-danger"
+          >Delete</a
+        >
+        <a
+          href="{% url 'articles:edit' slug=event.slug %}"
+          class="btn btn-primary btn-sm m-1"
+          >Edit</a
+        >
+        {% if event.is_approved == False %}
+        <form action="{% url 'articles:approve' slug=event.slug %}" method="POST">
+          {% csrf_token %}
+          <button type="submit"  class="btn btn-primary btn-sm m-1" >Approve</button>
+        </form>
+        {% else %}
+         <button class="btn btn-primary btn-sm m-1">Approved</button>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+<section id="skills" class="skills">
+  <div class="container" data-aos="fade-up">
+    <div class="text-center pb-3">
+      <h2>Events You have Registered</h2>
+    </div>
+    <div class="event-container">
+      {% for event in events %}
+      <div class="event">
+        <p>Name: {{ event.event_name }}</p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <p>Approved by: {{ event.approved_by }}</p>
+        <a href="{{event.reg}}">Link to register</a>
+        <br />
+        <hr />
+        <a
+          href="{% url 'articles:detail' slug=event.slug %}"
+          class="btn btn-primary"
+          >More info</a
+        >
+        <a
+          href="{% url 'articles:delete' slug=event.slug %}"
+          class="btn btn-danger"
+          >Delete</a
+        >
+        <a
+          href="{% url 'articles:edit' slug=event.slug %}"
+          class="btn btn-primary btn-sm m-1"
+          >Edit</a
+        >
+      </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

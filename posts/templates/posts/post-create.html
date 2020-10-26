@@ -1,0 +1,94 @@
+{% extends 'base.html' %} {% block filepond %}
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+{% endblock %} {% block filepond_js %}
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+{% endblock %} {% block content %}
+
+<form class="text-center border border-light p-5" action="#!">
+  {% csrf_token %}
+  <p class="h4 mb-4">Sign in</p>
+  <label>Title</label>
+  <input type="text" id="title" class="form-control" />
+  <label>Poster</label>
+  <input type="file" id="poster" />
+  <label for="">Gallery Photos</label>
+  <input type="file" multiple id="gallery" />
+  <button
+    type="button"
+    id="saveBtn"
+    class="btn btn-primary mt-4"
+    style="background-color: #37517e"
+  >
+    Save
+  </button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var files = [];
+    var posterFile = [];
+    const inputElement = document.querySelector("#gallery");
+    const posterElement = document.querySelector("#poster");
+    const pond = FilePond.create(inputElement, {
+      acceptedFileTypes: ["image/png", "image/jpeg"],
+      onaddfile: (err, fileItem) => {
+        if (!err) {
+          files.push(fileItem.file);
+        }
+        console.log(files);
+      },
+      onremovefile: (err, fileItem) => {
+        const index = files.indexOf(fileItem.file);
+        if (index > -1) {
+          files.splice(index, 1);
+        }
+        console.log(files);
+      },
+    });
+    const pond2 = FilePond.create(posterElement, {
+      acceptedFileTypes: ["image/png", "image/jpeg"],
+      onaddfile: (err, posterItem) => {
+        if (!err) {
+          posterFile.push(posterItem.file);
+        }
+        console.log(posterFile);
+      },
+      onremovefile: (err, posterItem) => {
+        const index = posterFile.indexOf(posterItem.file);
+        if (index > -1) {
+          posterFile.splice(index, 1);
+        }
+        console.log(posterFile);
+      },
+    });
+
+    var formData = new FormData();
+    $(document).on("click", "#saveBtn", function (e) {
+      formData.append("length", files.length);
+      formData.append("title", $("#title").val());
+      //   formData.append("poster", $("#poster").val());
+      formData.append("poster", posterFile[0]);
+      for (var i = 0; i < files.length; i++) {
+        formData.append("images" + i, files[i]);
+      }
+      formData.append("csrfmiddlewaretoken", "{{ csrf_token }}");
+
+      $.ajax({
+        type: "POST",
+        url: '{% url "createPost" %}',
+        data: formData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        enctype: "multipart/form-data",
+        success: function () {
+          alert("The post has been created!");
+        },
+        error: function (xhr, errmsg, err) {
+          console.log(xhr.status + ":" + xhr.responseText);
+        },
+      });
+    });
+  });
+</script>
+{% endblock %}

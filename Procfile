@@ -1,0 +1,1 @@
+web: gunicorn ieee_app.wsgi --log-file - 
