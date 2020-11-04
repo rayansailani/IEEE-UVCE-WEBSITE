@@ -1,0 +1,455 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- <div class="container" data-aos="fade-up" style="">
+    {% for post in posts %}
+    <div class="card m-1">
+      <img
+        class="card-img-top"
+        src="{{post.Poster.url}}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+
+        <a href="{% url 'detail' post.id %}" class="btn btn-primary btn-md">
+          View Images
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div> -->
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <!-- <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Gallery Details</li>
+            </ol>
+            <h2>Gallery Details</h2>
+
+        </div>
+    </section> -->
+  <!-- End Breadcrumbs -->
+
+  <!-- Gallery section-->
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <!-- <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Gallery Details</li>
+            </ol>
+            <h2>Gallery Details</h2>
+
+        </div>
+    </section> -->
+    <!-- End Breadcrumbs -->
+
+    <!-- Gallery section-->
+    <section id="Gallery" class="Gallery">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <div class="row-lg-">
+            <div class="col-lg-">
+              <h2 style="margin-top: 80px;">Gallery</h2>
+            </div>
+          </div>
+
+          <!-- 
+                <ul id="Gallery-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">App</li>
+                    <li data-filter=".filter-card">Card</li>
+                    <li data-filter=".filter-web">Web</li>
+                </ul> -->
+
+          <div class="row Gallery-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-app">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <a href="{% static 'img/gallery-images/gallery_1.webp' %}" data-gall="GalleryGallery"
+                  class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="{% static 'img/gallery-images/gallery_1.webp' %}" class="details-link" title="More Details"><i
+                    class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_2.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_3.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-3.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_4.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-4.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_5.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+              <div class="Gallery-img"><img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid"
+                  alt=""></div>
+              <div class="Gallery-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <a href="assets/img/Gallery/Gallery-2.jpg" data-gall="GalleryGallery" class="venobox preview-link"
+                  title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="Gallery-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    {% endblock %}

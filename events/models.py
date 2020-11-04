@@ -21,6 +21,7 @@ class Event(models.Model):
     is_approved = models.BooleanField(default=False, blank=True)
     approved_by = models.CharField(
         max_length=40,  null=True, blank=True, default=" ")
+    # likes = models.ManyToManyField(User, related_name="like_event")
 
     def __str__(self):
         return self.event_name

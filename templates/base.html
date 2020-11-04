@@ -55,7 +55,10 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <div class="col-lg-2 col-md-2 col-4 d-flex align-items-center justify-content-center">
-        <a href="{% url 'home_page' %}">
+        <a href="
+        {% block home_red %}
+        {% url 'home_page' %}
+        {% endblock  %}">
           <img src="{% static 'img/favicon-small.webp' %}" width="70%" height="50%" class="img-fluid" alt="" />
         </a>
       </div>
@@ -100,9 +103,9 @@
                   <li>
                     <a href="{% url 'articles:update' %}">create an anouncement</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="{% url 'createPost' %}">Add image(s) to Gallery</a>
-                  </li>
+                  </li> -->
 
                   {% endif %}
                 </ul>
@@ -182,7 +185,9 @@
   <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
   <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  {% block venobox %}
 
+  {% endblock  %}
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   {% block filepond_js %}
