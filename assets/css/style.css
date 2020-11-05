@@ -481,7 +481,7 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 100vh;
+    height: auto;
     text-align: center;
   }
   #hero .animated {
@@ -492,7 +492,8 @@ h6 {
     text-align: center;
   }
   #hero .hero-img img {
-    width: 50%;
+    margin-top:30px;
+    width: 100%;
   }
 }
 

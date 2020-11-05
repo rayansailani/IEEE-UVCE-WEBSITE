@@ -1,203 +1,242 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %}
 {% block venobox %}
 <link rel="stylesheet" href="{% static 'vendor/venobox/venobox.min.css' %}">
 <script src="{% static 'vendor/venobox/venobox.min.js'  %}"></script>
 {% endblock %}
 {% block content %}
 
-<!-- Gallery section-->
-<section id="Gallery" class="Gallery" style="margin-top:0px;">
-    <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-            <div class="row-lg-">
-                <div class="col-lg-">
-                    <h2 style="">Gallery</h2>
-                </div>
-            </div>
-        </div>
+<!-- <div class="container" data-aos="fade-up" style="">
+    {% for post in posts %}
+    <div class="card m-1">
+      <img
+        class="card-img-top"
+        src="{{post.Poster.url}}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
 
-        <div class="row Gallery-container m-3" data-aos="fade-up" data-aos-delay="200">
+        <a href="{% url 'detail' post.id %}" class="btn btn-primary btn-md">
+          View Images
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div> -->
+<main id="main">
 
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_1.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_1.webp' %}" class="img-fluid" alt="">
-                    </a>
-                </div>
-            </div>
+    <!-- ======= Breadcrumbs ======= -->
+    <!-- <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
 
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_2.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_2.webp' %}" class="img-fluid" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_3.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_3.webp' %}" class="img-fluid" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_4.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_4.webp' %}" class="img-fluid" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_5.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_5.webp' %}" class="img-fluid" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_6.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_6.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_7.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_7.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_8.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_8.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_9.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_9.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_10.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_10.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_11.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_11.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_12.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_12.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_13.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_13.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_14.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_14.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_15.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_15.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_16.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_16.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_17.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_17.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 Gallery-item filter-web">
-                <div class="Gallery-img">
-                    <a href="{% static 'img/gallery-images/gallery_18.webp' %}" data-gall="GalleryGallery"
-                        class="venobox preview-link">
-                        <img src="{% static 'img/gallery-images/gallery_18.webp' %}" class="img-fluid" alt=""
-                            loading="lazy">
-                    </a>
-                </div>
-            </div>
-
-
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Gallery Details</li>
+            </ol>
+            <h2>Gallery Details</h2>
 
         </div>
-</section>
+    </section> -->
+    <!-- End Breadcrumbs -->
 
-{% endblock %}
+    <!-- Gallery section-->
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <!-- <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Gallery Details</li>
+            </ol>
+            <h2>Gallery Details</h2>
+
+        </div>
+    </section> -->
+        <!-- End Breadcrumbs -->
+
+        <!-- Gallery section-->
+        <section id="Gallery" class="Gallery">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <div class="row-lg-">
+                        <div class="col-lg-">
+                            <h2 style="margin-top: 80px;">Gallery</h2>
+                        </div>
+                    </div>
+
+                    <!-- 
+                <ul id="Gallery-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">App</li>
+                    <li data-filter=".filter-card">Card</li>
+                    <li data-filter=".filter-web">Web</li>
+                </ul> -->
+
+                    <div class="row Gallery-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery1.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery1.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery2.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery2.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery3.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery3.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery4.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery4.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery5.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery5.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery6.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery6.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery7.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery7.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery8.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery8.webp' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery10.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery10.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery11.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery11.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery12.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery12.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery13.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery13.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery14.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery14.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery15.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery15.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img">
+                                <a href="{% static 'img/gallery-images/Gallery16.webp' %}" data-gall="GalleryGallery"
+                                    class="venobox preview-link">
+                                    <img src="{% static 'img/gallery-images/Gallery16.webp' %}" class="img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div style="height: 50px;"></div>
+                        </div>
+
+
+        </section>
+
+        {% endblock %}
