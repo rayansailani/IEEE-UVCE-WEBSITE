@@ -40,10 +40,10 @@ class CreateEvent(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Organizer of the Event'
     }))
-    poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
-        'class': 'form-control',
-        'type': 'file'
-    }))
+    # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
+    #     'class': 'form-control',
+    #     'type': 'file'
+    # }))
     # winners = forms.CharField(widget=forms.Textarea(attrs={
     #     'class': 'form-control',
     #     'placeholder': 'Winners of the event (only to be update once '
@@ -53,7 +53,7 @@ class CreateEvent(forms.ModelForm):
 
         model = models.Event
         fields = ['event_name', 'slug', 'date', 'time', 'location',
-                  'reg', 'description', 'orgzer',  'poster']
+                  'reg', 'description', 'orgzer']
 
 
 class CreateUpdateForm(forms.ModelForm):
@@ -68,6 +68,7 @@ class CreateUpdateForm(forms.ModelForm):
     till_when = forms.DateField(widget=forms.DateInput(attrs={
         'class': 'form-control',
         'type': 'date',
+        'placeholder': 'Date of Event',
     }))
 
     class Meta:
@@ -121,10 +122,10 @@ class UpdateBlogPostForm(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Organizer of the Event'
     }))
-    poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
-        'class': 'form-control',
-        'type': 'file'
-    }))
+    # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
+    #     'class': 'form-control',
+    #     'type': 'file'
+    # }))
     winners = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'form-control',
         'Placeholer': 'Enter the winners if decided'
@@ -133,7 +134,7 @@ class UpdateBlogPostForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = ['event_name',  'date', 'time', 'location', 'slug',
-                  'reg', 'description', 'orgzer', 'winners', 'poster']
+                  'reg', 'description', 'orgzer', 'winners']
 
     def save(self, commit=True):
         event = self.instance
@@ -147,8 +148,8 @@ class UpdateBlogPostForm(forms.ModelForm):
         event.orgzer = self.cleaned_data['orgzer']
         event.slug = self.cleaned_data['slug']
 
-        if self.cleaned_data['poster']:
-            event.poster = self.cleaned_data['poster']
+        # if self.cleaned_data['poster']:
+        #     event.poster = self.cleaned_data['poster']
         if commit:
             event.save()
         return event

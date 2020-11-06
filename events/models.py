@@ -15,7 +15,7 @@ class Event(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     orgzer = models.CharField(max_length=40)
     winners = models.TextField(blank=True, default='Not Yet Decided')
-    poster = models.ImageField(default='default.png', blank=True)
+    # poster = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     #member_exclusive = models.BooleanField(default=None, blank=True)
     is_approved = models.BooleanField(default=False, blank=True)

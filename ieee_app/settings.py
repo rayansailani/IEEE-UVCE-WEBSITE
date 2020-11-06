@@ -25,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(=kqy5g@f^hfj(4rq_&*82+bnl+yt0qgjg%7@)!l9mgo3_n8rx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com',
+                 '127.0.0.1', 'ieeeuvce.in']
 
 
 # Application definition
@@ -158,3 +159,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'spprtself@gmail.com'
 EMAIL_HOST_PASSWORD = 'supportselfemailpassword'
+
+# white house config
+
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
