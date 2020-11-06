@@ -18,10 +18,11 @@
 {% endblock %}
 {% block home %}
 <li style="display: none;"></li>
-
+{% if updates %}
 <li>
     <a href="#updates">Updates</a>
 </li>
+{% endif %}
 
 <li>
     <a href="#fests">Fests</a>
@@ -168,6 +169,7 @@
 </section>
 <!-- End About Us Section -->
 <!-- Update section  -->
+{% if updates %}
 <div id="updates"></div>
 <section id="skills" class="skills">
     <div class="container" data-aos="fade-up" style="text-align: center;margin:auto">
@@ -177,16 +179,19 @@
         </div>
         <marquee width="100%" direction="up" height="150px">
             {% for update in updates %}
+
             <ul style="list-style-type: none;">
                 <li>
                     <b>{{ update.title}}</b>: {{ update.Update}}
                 </li>
             </ul>
+
             {% endfor %}
         </marquee>
 
     </div>
 </section>
+{% endif %}
 <div class="" id="fests"></div>
 <section id="why-us" class="why-us section-bg">
     <div class="container-fluid" data-aos="fade-up">
@@ -569,7 +574,7 @@
                 <img loading="lazy" src="{% static 'img\teachers\venugopal.webp' %}" class="rounded z-depth-1-half"
                     alt="Sample avatar">
             </div>
-            <h4 class="font-weight-bold dark-grey-text my-4">Dr. K R venugopal</h4>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. K R Venugopal</h4>
             <h6 class="text-uppercase grey-text mb-3"><strong>Branch Patron</strong></h6>
 
         </div>
@@ -630,22 +635,23 @@
         <h2>Quick Links</h2>
     </div>
     <div class="text-center xl">
-        <a href="">WIECON 2019</a>
-        | <a href="">IEEE XTREME</a>
+        <a href="https://wiecon-ece.org/">WIECON 2019</a>
+        | <a href="https://ieeextreme.org/">IEEE XTREME</a>
     </div>
     <div class="text-center xl">
-        <a href="">IEEE Spectrum</a>
-        | <a href="">IEEE Xplore</a>
-    </div>
-
-    <div class="text-center xl">
-        <a href="">IEEE Collabratec</a>
-        | <a href="">IEEE Newsroom</a>
+        <a href="https://spectrum.ieee.org/?_ga=2.208003794.1780465242.1604323882-942948472.1581063035">IEEE
+            Spectrum</a>
+        | <a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore</a>
     </div>
 
     <div class="text-center xl">
-        <a href="">IEEE Standards University</a>
-        <a href="">IEEE Certificates Program</a>
+        <a href="https://ieee-collabratec.ieee.org/">IEEE Collabratec</a>
+        | <a href="https://www.ieee.org/about/news/index.html">IEEE Newsroom</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="https://standards.ieee.org/">IEEE Standards University</a> |
+        <a href="https://www.ieee.org/education/certificates/index.html">IEEE Certificates Program</a>
     </div>
 
     <div class="text-center xl">
