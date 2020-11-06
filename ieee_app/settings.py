@@ -28,7 +28,7 @@ SECRET_KEY = '(=kqy5g@f^hfj(4rq_&*82+bnl+yt0qgjg%7@)!l9mgo3_n8rx'
 DEBUG = True
 
 ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com',
-                 '127.0.0.1', 'ieeeuvce.in']
+                 '127.0.0.1', 'www.ieeeuvce.in']
 
 
 # Application definition
