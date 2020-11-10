@@ -1,25 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block home_red %}
+#
+{% endblock %}
+{% block styling  %}
+<style>
+    .image-banner {
+        background-image: url("{% static 'img/ieeebanner-1000.webp' %}");
+    }
+
+    @media screen and (max-width: 500px) {
+        .image-banner {
+            background-image: url("{% static 'img/ieeebanner-500.webp' %}");
+        }
+    }
+</style>
+{% endblock %}
 {% block home %}
 <li style="display: none;"></li>
-
+{% if updates %}
 <li>
     <a href="#updates">Updates</a>
 </li>
+{% endif %}
 
 <li>
     <a href="#fests">Fests</a>
 </li>
 
 <li>
-    <a href="{% url 'home_page' %}">SIG</a>
+    <a href="#sig">SIG</a>
 </li>
 
 <li>
-    <a href="{% url 'home_page' %}">Awards</a>
+    <a href="#awrds">Awards</a>
 </li>
 
 
-<li><a href="{% url 'home_page' %}">Contact</a></li>
+<li><a href="#contacts">Contact</a></li>
 {% endblock %}
 {% load static %}
 {% block hero %}
@@ -33,19 +51,22 @@
                 <h2>Striding Ahead!</h2>
                 <div class="d-lg-flex">
 
-                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video"
-                        data-vbtype="video" data-autoplay="true">
+                    <a href="https://youtu.be/rjpbI2PFx10" class="venobox btn-watch-video" data-vbtype="video"
+                        data-autoplay="true">
                         Watch Video <i class="icofont-play-alt-2"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="{% static 'img/bg-masthead.webp' %}" class="img-fluid animated" alt="" />
+                <img src="{% static 'img/head-500.webp' %}"
+                    srcset="{% static 'img/head-500.webp' %} 500w, {% static 'img/head-1000.webp' %} 1000w"
+                    class="img-fluid animated" alt="" />
             </div>
         </div>
     </div>
 </section>
 {% endblock %}
 {% block footer %}
+<div class="" id="contacts"></div>
 <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
 
@@ -60,28 +81,38 @@
                 <div class="col-sm-6">
 
                     <div class="email">
-                        <i class="icofont-envelope"></i>
-                        <h4>Email:</h4>
-                        <p>ieeeuvce@gmail.com/p>
+                        <a href="mailto:ieeeuvce@gmail.com">
+                            <i class="icofont-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>ieeeuvce@gmail.com</p>
+                        </a>
                     </div>
                     <div class="email">
                         <i class="icofont-linkedin"></i>
-                        <h4>linkedin</h4>
-                        <p>ieeeuvce@gmail.com/p>
+                        <a href="https://www.linkedin.com/in/ieee-uvce-66563332">
+                            <h4>linkedin</h4>
+                            <p>IEEE UVCE</p>
+                        </a>
+
                     </div>
 
                 </div>
                 <div class="col-sm-6">
                     <div class="address">
-                        <i class="icofont-facebook"></i>
-                        <h4>Facebook</h4>
-                        <p>IEEE UVCE, KR CIRCLE BANGALORE</p>
+                        <a href="https://www.facebook.com/ieeeuvce">
+                            <i class="icofont-facebook"></i>
+                            <h4>Facebook</h4>
+                            <p>ieeeuvce</p>
+                        </a>
+
                     </div>
 
                     <div class="address">
-                        <i class="icofont-instagram"></i>
-                        <h4>Instagram</h4>
-                        <p>IEEE UVCE, KR CIRCLE BANGALORE</p>
+                        <a href="https://instagram.com/ieeeuvce?igshid=13ji244uruko2">
+                            <i class="icofont-instagram"></i>
+                            <h4>Instagram</h4>
+                            <p>ieee-uvce</p>
+                        </a>
                     </div>
 
 
@@ -120,15 +151,17 @@
         <div class="row content p-5">
             <div class="p-2 " style="text-align: justify;">
                 <p>
-                    IEEE Student Branch of UVCE endeavors to enhance the learning experience of the student community on
+                    IEEE Student Branch of UVCE endeavors to enhance the learning experience of the students community
+                    on
                     the UVCE campus. The Student Branch intends on providing different social, cultural and technical
                     events for the students throughout the year. We encourage the students to take full advantage of the
                     benefits of IEEE membership, including scholarships, competitions, and conference grants. The
                     Student Branch also emphasizes the students to work with peers in other institutes, academicians,
                     professionals, engineers, and scientists through the on campus IEEE Student Branch and the Local
                     IEEE Section, thereby encouraging students to be a part of the global IEEE community.
+
                 </p>
-                <a href="#" class="btn-learn-more">Learn More</a>
+                <a href="https://www.ieee.org/" class="btn-learn-more " style="text-align: center;">Learn More</a>
             </div>
         </div>
 
@@ -136,6 +169,7 @@
 </section>
 <!-- End About Us Section -->
 <!-- Update section  -->
+{% if updates %}
 <div id="updates"></div>
 <section id="skills" class="skills">
     <div class="container" data-aos="fade-up" style="text-align: center;margin:auto">
@@ -145,16 +179,20 @@
         </div>
         <marquee width="100%" direction="up" height="150px">
             {% for update in updates %}
+
             <ul style="list-style-type: none;">
                 <li>
                     <b>{{ update.title}}</b>: {{ update.Update}}
                 </li>
             </ul>
+
             {% endfor %}
         </marquee>
 
     </div>
 </section>
+{% endif %}
+<div class="" id="fests"></div>
 <section id="why-us" class="why-us section-bg">
     <div class="container-fluid" data-aos="fade-up">
         <div class="section-title">
@@ -166,7 +204,7 @@
 
                 <div class="content">
 
-                    <h3>Our Flagship events</strong></h3>
+                    <h3><strong>Our Flagship events</strong></h3>
 
                 </div>
 
@@ -232,38 +270,279 @@
 
             </div>
 
-            <div loading="lazy" class="col-lg-4 align-items-stretch order-1 order-lg-2 img p-3 m-3"
-                style='background-image: url("{% static 'img/ieeebanner1.webp' %}");' data-aos="zoom-in"
-                data-aos-delay="150">
+            <div loading="lazy" class="col-lg-4 align-items-stretch order-1 order-lg-2 img p-3 m-3 image-banner"
+                style='' data-aos="zoom-in" data-aos-delay="150">
                 &nbsp;</div>
         </div>
 
     </div>
 </section>
-<!-- End Why Us Section -->
-
-<!-- ======= Skills Section ======= -->
+<div class="" id="sig"></div>
 <section id="skills" class="skills">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Special Interest Groups</h2>
         </div>
+        <div style="display:flex; flex-direction:column;justify-content:center;align-items:center;">
+            <a href="" class="btn btn-info btn-block my-2 sig-button" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal1">Art Forum</a>
 
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal2">Computer Society</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal3">Graphic design</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal4">Literary
+                club</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal6">PES</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal7">Special Interest Group on Humanitarian Technology
+                (SIGHT)</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal8">Web Development</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal9">Women in Engineering </a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal10">Yantrik</a>
+        </div>
     </div>
+    <div id="myModal1" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Art forum</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/artforum.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Art Forum SIG is a club that provides artistic opportunities beyond the walls of the classroom.
+                        Art Forum is for all those students who are passionate and interested in art. It promotes
+                        creative qualities among students. Its goal is to promote active participation of students in
+                        different events conducted by the club and also to promote student involvement in activities
+                        which gives them the opportunity to put forward their creative ideas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal2" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Computer Society</h4>
+
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/cs.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Computer Society (CS) is one of the most prominent societies that comes under IEEE UVCE. It acts
+                        as a great platform for students of all branches to learn more and contribute to the computing
+                        world. Computer Society has been conducting many events since its inception which includes our
+                        yearly hackathon CodeFury, our monthly coding competition NCode and several workshops to kindle
+                        student's interest to update their knowledge on new upcoming technological advances and improve
+                        their programming skills as well..</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal3" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Graphic Design</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/design.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Graphic Design team of IEEE UVCE consists of passionate designers who design and conduct
+                        workshops on Adobe Illustrator and Photoshop. This SIG gives opportunities to the students to be
+                        a part of the design team for various events conducted by IEEE UVCE. It was started in April
+                        2017.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal4" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Literary Club</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/lit.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Literary Club functions as a part of IEEE UVCE with a motto of harnessing the linguistic skills.
+                        It conducts activities to develop communication and creative writing abilities of students. This
+                        club helps in enhancing the communication skills of students and helps them communicate their
+                        ideas and innovations in a clear and efficient way.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal6" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Power And Electric Society</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/pes.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Power & Energy Society (PES) is a new student chapter under IEEE UVCE, started in April 2019. The
+                        main aim of the Society is to strengthen the technical skills of interested students from all
+                        branches, but mainly concentrated on students of electronics and electrical branches. It
+                        conducts many technical events, talks and industrial visits. A monthly Electronics and
+                        Electrical Challenge Voltorb is also conducted, through which students can test their technical
+                        strengths.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal7" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">SIGHT</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/sight.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Special Interest Group on Humanitarian Technology (SIGHT) is an ensemble in IEEE that focuses on
+                        projects that are beneficial to the society. It gives enthusiastic groups of engineers a
+                        platform to reach out to different sectors of people in different walks of life, thereby
+                        changing lives one at a time towards their better future by solving their everyday problems by
+                        providing a technology based solution.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal8" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Web Development</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/wd.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Web Development SIG was started in April 2017. This is the web tweaking pavilion of IEEE UVCE. It
+                        specialises in conducting all the web related competitions and workshops for IEEE UVCE.
+                        Workshops on HTML and CSS and contests on front end designing have been conducted.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal9" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Women in Engineering </h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/wie.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Women in Engineering (WIE) is a global network of IEEE members and volunteers dedicated to
+                        promoting women engineers and scientists, and inspiring girls around the world to follow their
+                        academic interests in a career in engineering and science. IEEE UVCE WIE is an Affinity group
+                        under IEEE UVCE. It's goal is to facilitate the recruitment and retention of women in technical
+                        disciplines globally. We envision a vibrant community of IEEE women and men collectively using
+                        their diverse talents to innovate for the benefit of humanity..</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="myModal10" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Yantrik</h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/yantrik.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Yantrik, the Robotics club was formed in 2005 to further the understanding of the field. Students
+                        from various discipline have collaborated to keep this club active for last 14 years. With the
+                        wake of recent developments in technology, robotics predominates the important sectors and also
+                        demands a new approach. The club has shouldered several workshops, events and peer-to-peer
+                        training programs for teaching robotics to everyone who were curious and interested and intends
+                        to form a strong community of roboticists in UVCE. It commits to the fundamentals for rethinking
+                        the design and to build efficient robots with advanced capabilities.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 
 </section>
 <!-- End Skills Section -->
 
 <!-- ======= Awards Section ======= -->
+<div class="" id="awrds"></div>
 <section id="Awards" class="Awards section-bg">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Awards and Recognition</h2>
             <img class='center-block' style="max-width:100%; border:2px solid black;" loading="lazy"
-                src="{% static 'img/ieeeawards.webp' %}" alt="">
+                src="{% static 'img/ieeeawards-500.webp' %}" srcset="{% static 'img/ieeeawards-500.webp' %} 500w,
+                {% static 'img/ieeeawards-1000.webp' %} 1515w
+                " alt="">
 
         </div>
 </section>
@@ -295,7 +574,7 @@
                 <img loading="lazy" src="{% static 'img\teachers\venugopal.webp' %}" class="rounded z-depth-1-half"
                     alt="Sample avatar">
             </div>
-            <h4 class="font-weight-bold dark-grey-text my-4">Dr. K R venugopal</h4>
+            <h4 class="font-weight-bold dark-grey-text my-4">Dr. K R Venugopal</h4>
             <h6 class="text-uppercase grey-text mb-3"><strong>Branch Patron</strong></h6>
 
         </div>
@@ -356,22 +635,23 @@
         <h2>Quick Links</h2>
     </div>
     <div class="text-center xl">
-        <a href="">WIECON 2019</a>
-        | <a href="">IEEE XTREME</a>
+        <a href="https://wiecon-ece.org/">WIECON 2019</a>
+        | <a href="https://ieeextreme.org/">IEEE XTREME</a>
     </div>
     <div class="text-center xl">
-        <a href="">IEEE Spectrum</a>
-        | <a href="">IEEE Xplore</a>
-    </div>
-
-    <div class="text-center xl">
-        <a href="">IEEE Collabratec</a>
-        | <a href="">IEEE Newsroom</a>
+        <a href="https://spectrum.ieee.org/?_ga=2.208003794.1780465242.1604323882-942948472.1581063035">IEEE
+            Spectrum</a>
+        | <a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore</a>
     </div>
 
     <div class="text-center xl">
-        <a href="">IEEE Standards University</a>
-        <a href="">IEEE Certificates Program</a>
+        <a href="https://ieee-collabratec.ieee.org/">IEEE Collabratec</a>
+        | <a href="https://www.ieee.org/about/news/index.html">IEEE Newsroom</a>
+    </div>
+
+    <div class="text-center xl">
+        <a href="https://standards.ieee.org/">IEEE Standards University</a> |
+        <a href="https://www.ieee.org/education/certificates/index.html">IEEE Certificates Program</a>
     </div>
 
     <div class="text-center xl">

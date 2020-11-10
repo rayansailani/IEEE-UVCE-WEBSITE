@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 import os
 import sys
@@ -27,7 +28,8 @@ SECRET_KEY = '(=kqy5g@f^hfj(4rq_&*82+bnl+yt0qgjg%7@)!l9mgo3_n8rx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com',
+                 '127.0.0.1', 'www.ieeeuvce.in']
 
 
 # Application definition
@@ -100,6 +102,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -158,3 +163,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'spprtself@gmail.com'
 EMAIL_HOST_PASSWORD = 'supportselfemailpassword'
+
+# white house config
+
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

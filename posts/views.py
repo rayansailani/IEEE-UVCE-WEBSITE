@@ -3,6 +3,7 @@ from .models import PostImage, Post
 from accounts.models import Account
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+import os
 User = settings.AUTH_USER_MODEL
 
 # Create your views here.
@@ -17,11 +18,16 @@ def is_sh(request):
 
 # function to display the gallery of all events
 
+# assets\img\gallery-images\gallery_63.webp
+
 
 def post_view(request):
     posts = Post.objects.all()
+    l = []
+    for x in range(1, 65):
+        l.append('img/gallery-items/gallery_%s' % x)
     context = {
-        "posts": posts,
+        "posts": posts
     }
     return render(request, 'posts/post.html', context)
 
