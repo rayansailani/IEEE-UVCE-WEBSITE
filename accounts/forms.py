@@ -23,7 +23,7 @@ class RegistrationForm(UserCreationForm):
         'class': 'form-control',
         'placeholder': 'Confirm Password',
     }))
-    membership_no = forms.CharField(max_length=8, required=False, widget=forms.TextInput(attrs={
+    membership_no = forms.CharField(max_length=8, min_length=8, required=False, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter IEEE membership no. Optional',
     }))
@@ -41,11 +41,11 @@ class RegistrationForm(UserCreationForm):
 class AccountAuthenticationForm(forms.ModelForm):
     password = forms.CharField(
         label='password', widget=forms.PasswordInput(attrs={'class': 'form-control',
-                                                            'placeholder': 'Enter a valid password',
+                                                            'placeholder': 'Enter your password',
                                                             }))
     email = forms.EmailField(label="email", widget=forms.EmailInput(attrs={
         'class': "form-control",
-        'placeholder': 'Email address'
+        'placeholder': 'Enter your registered Email address'
     }))
 
     class Meta:

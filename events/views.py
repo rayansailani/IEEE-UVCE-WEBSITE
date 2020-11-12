@@ -113,7 +113,6 @@ def edit_view(request, slug):
             form = UpdateBlogPostForm(
                 initial={
                     "event_name": event.event_name,
-                    'poster': event.poster,
                     'date': event.date,
                     'reg': event.reg,
                     'time': event.time,
