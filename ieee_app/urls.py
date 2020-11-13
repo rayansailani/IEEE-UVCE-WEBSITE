@@ -14,6 +14,7 @@ urlpatterns = [
     path('posts/', include('posts.urls')),
     path('', views.home, name="home_page"),
     path('team', views.teams, name="team"),
+    path('register', views.reg_form, name="reg_form"),
 
 
     # for resetting password functionality

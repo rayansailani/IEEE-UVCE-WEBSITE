@@ -17,3 +17,7 @@ def home(request):
 
 def teams(request):
     return render(request, 'team.html')
+
+
+def reg_form(request):
+    return render(request, 'reg.html')

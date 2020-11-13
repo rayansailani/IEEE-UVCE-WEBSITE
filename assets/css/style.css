@@ -182,7 +182,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {
-  color: #47b2e4;
+  color: white;
 }
 
 .nav-menu .drop-down ul {
@@ -406,7 +406,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background: #37517e;
 }
 @media screen and (max-width: 800) {
