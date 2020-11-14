@@ -40,9 +40,11 @@ def events_list(request):
 
 
 def event_detail(request, slug):
+    today = datetime.date.today()
     event = Event.objects.get(slug=slug)
     content = {
-        'event': event
+        'event': event,
+        "today": today,
     }
     return render(request, 'events/events_detail.html', content)
 

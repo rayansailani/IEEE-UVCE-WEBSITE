@@ -8,8 +8,8 @@
       {% for event in event_today %}
       <div class="event">
         <p>Name: <b>{{ event.event_name }}</b></p>
-        <p>Date: {{ event.date }}</p>
-        <p>Time: {{ event.time }}</p>
+        <p>Start Date: <b>{{ event.date }}</b></p>
+        <p>Start Time: <b>{{ event.time }}</b></p>
         <a href="{{event.reg}}">Link to register</a>
         <br />
         <hr />
@@ -28,9 +28,9 @@
     <div class="event-container animated bounce">
       {% for event in eventnew %}
       <div class="event">
-        <p>Name: <b>{{ event.event_name }}</b></p>
-        <p>Date: {{ event.date }}</p>
-        <p>Time: {{ event.time }}</p>
+        <p>Start Name: <b>{{ event.event_name }}</b></p>
+        <p>Start Date: <b>{{ event.date }}</b></p>
+        <p>Time: <b>{{ event.time }}</b></p>
         <a href="{{event.reg}}">Link to register</a>
         <br />
         <hr />
@@ -49,9 +49,9 @@
     <div class="event-container">
       {% for event in eventold %}
       <div class="event">
-        <p>Name: {{ event.event_name }}</p>
-        <p>Date: {{ event.date }}</p>
-        <p>Time: {{ event.time }}</p>
+        <p>Name: <b>{{ event.event_name }}</b></p>
+        <p>Start Date: <b>{{ event.date }}</b></p>
+        <p>Start Time: <b>{{ event.time }}</b></p>
         <br />
         <hr />
         <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>

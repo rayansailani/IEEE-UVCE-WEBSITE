@@ -17,23 +17,19 @@
   </div>
 </section>
 <div class="container" data-aos="fade-up">
-  <!-- <img
-    loading="lazy"
-    class="img-thumbnail"
-    src="{{ event.poster.url }}"
-    alt="not decided default"
-    style="max-width: 100%; padding: 12ppx"
-  /> -->
+
   <div class="data p-2">
-    <p class="info" style="margin-top: 20px">Date: <b>{{event.date}}</b></p>
-    <p class="info">Time: <b>{{event.time}}</b></p>
+    <p class="info" style="margin-top: 20px">Start Date: <b>{{event.date}}</b></p>
+    <p class="info">Start Time: <b>{{event.time}}</b></p>
     <p class="info">Organizer(s): <b>{{event.orgzer}}</b></p>
     <p>Will be held at(/in): <b>{{event.location}}</b></p>
     <p>description: <b>{{event.description}}</b></p>
     {% if event.winners != 'Not Yet Decided' %}
     <p>Winner(s): <b>{{event.winners}}</b></p>
     {% endif %}
+    {% if event.date >= today %}
     <a href="{{event.reg}}">Link to register</a>
+    {% endif %}
   </div>
 </div>
 
