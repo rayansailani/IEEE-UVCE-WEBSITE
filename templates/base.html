@@ -78,13 +78,14 @@
           <li>
             <a href="{% url 'team' %}">Team</a>
           </li>
+          {% if user.is_authenticated %}
           <li class="drop-down ">
 
             {% if user.is_authenticated %}
 
             <a href="javascript:;">{{request.user.username}}</a>
             {% else %}
-            <a href="javascript:;">Accounts </a>
+            <!-- <a href="javascript:;">Accounts </a> -->
             {% endif %}
             <ul>
               {% if user.is_authenticated %}
@@ -121,6 +122,7 @@
           {% endif %}
         </ul>
         </li>
+        {% endif %}
 
         </ul>
       </nav>
