@@ -1,890 +1,1031 @@
-{% extends 'base.html' %} {% block content %}
-<section id="why-us" class="why-us section-bg">
-  <div class="container-fluid" data-aos="fade-up">
-    <!-- <div class="row"> -->
+{% extends 'base.html'%}
 
-    <!-- <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1"> -->
+{%  block content %}
+<style>
+    .accordion {
+        background-color: #37517e;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 
-    <div class="section-title">
-      <h2>TEAM IEEE UVCE</h2>
+    .accordion>.active,
+    .accordion:hover {
+        background-color: #37517e;
+    }
+
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: #f2f2f2;
+        overflow: hidden;
+    }
+</style>
+</head>
+
+<body>
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="section-title">
+                <h2>TEAM IEEE UVCE</h2>
+            </div>
+            <button class="accordion">Faculty Committee</button>
+            <div class="panel">
+                <div class="container" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Venugopal K R</h5>
+                                    <p class="card-text">Branch Patron</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. P Deepa Shenoy</h5>
+                                    <p class="card-text">Branch Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Kiran K</h5>
+                                    <p class="card-text">Branch Counselor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Venkatesh M</h5>
+                                    <p class="card-text">Branch Mentor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Lata BT</h5>
+                                    <p class="card-text">Branch Mentor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Pushpa C N</h5>
+                                    <p class="card-text">WIE Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Prof. H S Veena</h5>
+                                    <p class="card-text">PES Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. K P Guruswamy</h5>
+                                    <p class="card-text">PELS Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Thriveni J</h5>
+                                    <p class="card-text">SIGHT Faculty Mentor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. B M Rajaprakash</h5>
+                                    <p class="card-text">MDC Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Dr. Rekha H B</h5>
+                                    <p class="card-text">Civil Advisor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Executive Committee</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kennith O Koshy</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Vice Chair-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Hamsa Shree N A</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sandya Shree N</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Vishal M Kanthi</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Treasurer and joint treasurer-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Rajat R Lingadalli</h5>
+                                    <p class="card-text">Treasurer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Vikas Gowda L V</h5>
+                                    <p class="card-text">Joint Treasurer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gen sec-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Pruthvi Raj R</h5>
+                                    <p class="card-text">General Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--joint sec and membership-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Devika K N</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sanketh Rajshekhar Patil</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Gokula Krishnan S</h5>
+                                    <p class="card-text">Membership Development Committee Chair</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Jitendra Prasad K K</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Student Activities Committee (SAC)</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <!--sac vice and chair-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sanjana Raju</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Srinivas K</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--SAC co-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Maanasa H B</h5>
+                                    <p class="card-text">Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Women in Engineering (WIE)</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Mahima Pradeep</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Supriya V Kurpad</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--vice chair,gen,joint-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Varsha Nagesh</h5>
+                                    <p class="card-text">General Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">D S L Rasagnya</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Computer Society (CS) </button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sriram K K</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--vice chair-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Charan M K</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Pooja Hegde</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gen-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Ajantha Hebbar</h5>
+                                    <p class="card-text">General Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--joint-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Munnoli Sammed Jaykumar</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Swaminathan S</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Ncode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Anam Ali</h5>
+                                    <p class="card-text">NCode Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Nimitha J</h5>
+                                    <p class="card-text">NCode Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Power & Energy Society (PES)</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sunkeerth M</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--pes vice and co-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Varsha S Bhat</h5>
+                                    <p class="card-text">General Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Naveen Kumar N</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="accordion">Special Interest Group on Humanitarian Technology (SIGHT)</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Harshitha B R</h5>
+                                    <p class="card-text">Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--vice chair-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Harish Ramesh</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--sight gen and co-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Niveditha G</h5>
+                                    <p class="card-text">Vice-Chairperson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Harshini B R</h5>
+                                    <p class="card-text">General Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Anusha L</h5>
+                                    <p class="card-text">Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Yantrik (Robotics)</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Venkateshprasad</h5>
+                                    <p class="card-text">President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Vinay Desai</h5>
+                                    <p class="card-text">Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Ajay J</h5>
+                                    <p class="card-text">Coordinator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Web Development</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Manoj Kumar A</h5>
+                                    <p class="card-text">President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Mohammed Rayan Sailani</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Graphic Design</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Nivedita Kulkarnni</h5>
+                                    <p class="card-text">President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Art Forum</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team head"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Aditya Shetty</h5>
+                                    <p class="card-text">President</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Literary Club</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Anisha K S</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Saurabh S Bharadwaj</h5>
+                                    <p class="card-text">Joint Secretary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="accordion">Civil Representatives</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Deeksha Kalkatte L</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Deepak K S</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kalyan Kumar P</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Karthik K S</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Rajendraprasad G C</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Representative Committee</button>
+            <div class="panel">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Karthik K S</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Keerthi N C</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Shubham N J</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Srinidhi S Prasad</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kavya Bhat</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Mohith Varma VS</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Shriya A</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kruthin N</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Neha H</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Shrinidhi P</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Nilkant Bharat Gunjote</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Sukhada G Rao</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kalyan K R</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-dark mt-4 mb-4 text-center team"
+                                style="margin-left: 14%; margin-right: 14%">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title">Kishan S T</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- 
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
     </div>
 
-    <div class="accordion-list">
-      <ul>
-        <li>
-          <a data-toggle="collapse" class="collapse" href="#accordion-list-1"
-            style="font-size: 28px; text-align: center;color: #37517e;line-height: normal;"><strong>FACULTY</strong>
-            <i class="bx bx-chevron-down icon-show" style="align-items:left;"></i><i
-              class="bx bx-chevron-up icon-close"></i></a>
-          <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list" style="text-align: justify;">
-            <div class="container" data-aos="fade-up">
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Venugopal K R</h5>
-                      <p class="card-text">Branch Patron</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. P Deepa Shenoy</h5>
-                      <p class="card-text">Branch Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Kiran K</h5>
-                      <p class="card-text">Branch Counselor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Venkatesh M</h5>
-                      <p class="card-text">Branch Mentor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Lata B T</h5>
-                      <p class="card-text">Branch Mentor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Pushpa C N</h5>
-                      <p class="card-text">WIE Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Prof. H S Veena</h5>
-                      <p class="card-text">PES Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. K P Guruswamy</h5>
-                      <p class="card-text">PELS Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Thriveni J</h5>
-                      <p class="card-text">SIGHT Faculty Mentor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. B M Rajaprakash</h5>
-                      <p class="card-text">MDC Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card border-dark mt-4 mb-4 text-center team head"
-                    style="margin-left: 14%; margin-right: 14%">
-                    <div class="card-body p-3">
-                      <h5 class="card-title">Dr. Rekha H B</h5>
-                      <p class="card-text">Civil Advisor</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </li>
-
-        <li>
-          <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"
-            style="text-align:center;font-size:28px;color: #37517e;line-height: normal;">
-            <strong>
-              EXECUTIVE COMMITEE</strong> <i class="bx bx-chevron-down icon-show"></i><i
-              class="bx bx-chevron-up icon-close"></i></a>
-          <div id="accordion-list-2" class="collapse" data-parent=".accordion-list" style="text-align: justify;">
-            <!---------EXECOM-------->
-            <!--Chair-->
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kennith O Koshy</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Vice Chair-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Hamsa Shree N A</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sandya Shree N</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Vishal M Kanthi</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Treasurer and joint treasurer-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Rajat R Lingadalli</h5>
-                    <p class="card-text">Treasurer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Gokula Krishnan S</h5>
-                    <p class="card-text">Membership Development Committee Chair</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--gen sec-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Pruthvi Raj R</h5>
-                    <p class="card-text">General Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <!--joint sec and membership-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Devika K N</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sanketh Rajshekhar Patil</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Vikas Gowda L V</h5>
-                    <p class="card-text">Joint Treasurer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Jitendra Prasad K K</h5>
-                    <p class="card-text">Membership Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h1 class="mt-5 mb-4 text-center">Student Activities Committee (SAC)</h1>
-
-            <!--sac vice and chair-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sanjana Ramesh</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Srinivas K</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--SAC co-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Maanasa H B</h5>
-                    <p class="card-text">Coordinator</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h1 class="mt-5 mb-4 text-center">Women In Engineering (WIE)</h1>
-
-            <!--WIE-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Mahima Pradeep</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Supriya V Kurpad</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--vice chair,gen,joint-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Varsha Nagesh</h5>
-                    <p class="card-text">General Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">D S L Rasagnya</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--CS-->
-            <h1 class="mt-5 mb-4 text-center">Computer Society (CS)</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sriram K K</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <?php $c++; ?>
-
-            <!--vice chair-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Charan M K</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Pooja Hegde</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--gen-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Ajantha Hebbar</h5>
-                    <p class="card-text">General Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <?php $c++; ?>
-
-            <!--joint-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Munnoli Sammed Jaykumar</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Swaminathan S</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--Ncode-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Anam Ali</h5>
-                    <p class="card-text">NCode Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Nimitha J</h5>
-                    <p class="card-text">NCode Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--PES chair-->
-            <h1 class="mt-5 mb-4 text-center">Power & Energy Society (PES)</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sunkeerth M</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!--pes vice and co-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Varsha S Bhat</h5>
-                    <p class="card-text">General Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Naveen Kumar N</h5>
-                    <p class="card-text">Joint Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--SIGHT-->
-
-            <!--sight chair-->
-            <h1 class="mt-5 mb-4 text-center">
-              Special Interest Group on Humanitarian Technology (SIGHT)
-            </h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Harshitha B R</h5>
-                    <p class="card-text">Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--vice chair-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Harish Ramesh</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--sight gen and co-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Niveditha G</h5>
-                    <p class="card-text">Vice-Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Harshini B R</h5>
-                    <p class="card-text">General Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Anusha L</h5>
-                    <p class="card-text">Coordinator</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--ROBOTICS-->
-            <!--robotics chair-->
-            <h1 class="mt-5 mb-4 text-center">Robotics</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Venkateshprasad</h5>
-                    <p class="card-text">President</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <!--robo sec and co-->
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Vinay Desai</h5>
-                    <p class="card-text">Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Ajay J</h5>
-                    <p class="card-text">Coordinator</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--graphic design-->
-            <!--gd chair-->
-            <h1 class="mt-5 mb-4 text-center">Graphic Design</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Nivedita Kulkarnni</h5>
-                    <p class="card-text">President</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--art forum-->
-            <!--art forum chair-->
-            <h1 class="mt-5 mb-4 text-center">Art Forum</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Aditya Shetty</h5>
-                    <p class="card-text">President</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--WEB-->
-            <!--web chair and gen-->
-            <h1 class="mt-5 mb-4 text-center">Web Development</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team head"
-                  style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Manoj Kumar A</h5>
-                    <p class="card-text">President</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Mohammed Rayan Sailani</h5>
-                    <p class="card-text">Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--lit-->
-            <!--lit both-->
-            <h1 class="mt-5 mb-4 text-center">Literary Club</h1>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Anisha K S</h5>
-                    <p class="card-text">Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Saurabh S Bharadwaj</h5>
-                    <p class="card-text">Secretary</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"
-            style="text-align:center;font-size:28px; color: #37517e; padding:10px;line-height: normal;">
-            <strong>
-              REPRESENTATIVE COMMITEE
-            </strong><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-          <div id="accordion-list-3" class="collapse" data-parent=".accordion-list" style="text-align: justify;">
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Keerthi N C</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Shubham N J</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Srinidhi S Prasad</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kavya Bhat</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Shriya A</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kruthin N</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Mohith Varma VS</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Shrinidhi P</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Neha H</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Nilkant Bharat Gunjote</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Sukhada G Rao</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kalyan K R</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kishan S T</h5>
-                    <p class="card-text">RepCom Member</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--civil repcom-->
-            <h3 class="mt-5 mb-4 text-center">Civil Representatives</h3>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Deeksha Kalkatte L</h5>
-                    <p class="card-text">Civil Representative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Deepak K S</h5>
-                    <p class="card-text">Civil Representative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Kalyan Kumar P</h5>
-                    <p class="card-text">Civil Representative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Karthik K S</h5>
-                    <p class="card-text">Civil Representative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card border-dark mt-4 mb-4 text-center team" style="margin-left: 14%; margin-right: 14%">
-                  <div class="card-body p-3">
-                    <h5 class="card-title">Rajendraprasad G C</h5>
-                    <p class="card-text">Civil Representative</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-
-      </ul>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
     </div>
 
-    <!-- </div> -->
-    <!-- </div> -->
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Section 4</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Section 5</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Section 6</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+    </div> -->
 
-  </div>
-</section>
 
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
-{% endblock %}
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    {% endblock %}
