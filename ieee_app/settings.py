@@ -162,7 +162,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'spprtself@gmail.com'
-EMAIL_HOST_PASSWORD = 'supportselfemailpassword'
+EMAIL_HOST_PASSWORD = 'supportselfieee'
 
 # white house config
 

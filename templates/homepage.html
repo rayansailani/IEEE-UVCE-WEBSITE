@@ -14,6 +14,15 @@
             background-image: url("{% static 'img/ieeebanner-500.webp' %}");
         }
     }
+
+    .modal-header {
+        margin-bottom: 0;
+        margin: auto;
+    }
+
+    .modal-body {
+        margin: 16px;
+    }
 </style>
 {% endblock %}
 {% block home %}
@@ -50,8 +59,7 @@
                 <h1>IEEE UVCE</h1>
                 <h2>Striding Ahead!</h2>
                 <h2>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScrDFd9fXd_RjkC7dvmtdQKHjhCd0bVUQWo-sdqBM2gQ14JHQ/viewform?usp=pp_url"
-                        style="color:white;" target="_blank">
+                    <a href="https://forms.gle/ZeU5kg2HK5VjkCdE7" style="color:white;" target="_blank">
                         Get your <span style="font-weight: bolder;">IEEE
                             Membership</span> today!
                     </a>
@@ -341,11 +349,12 @@
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <h4 class="modal-title">Art forum</h4>
+                    <h4 class="modal-title" style="text-align: center;">Art forum</h4>
                 </div>
                 <img loading="lazy" src="{% static 'img/sig/artforum.png' %}" style="max-width: 100%;" alt="none">
                 <div class="modal-body">
-                    <p>The IEEE UVCE Art Forum is a club that provides artistic opportunities beyond the walls of the
+                    <p>The IEEE UVCE Art Forum is a club that provides
+                        artistic opportunities beyond the walls of the
                         classroom. Art Forum is for all those students who are passionate and interested in art. It
                         promotes creative qualities among students. Its goal is to promote active participation of
                         students in different events conducted by the club and also to promote student involvement in
@@ -604,11 +613,11 @@
         <!-- Grid column -->
         <div class="col-md-4 mb-md-0 mb-2">
             <div class="avatar mx-auto">
-                <img loading="lazy" style="height:225px;width:206px;;" src="{% static 'img\teachers\kiran.webp' %}"
-                    class="rounded z-depth-1-half" alt="Sample avatar">
+                <img loading="lazy" style="" src="{% static 'img\teachers\kiran.webp' %}" class="rounded z-depth-1-half"
+                    alt="Sample avatar">
             </div>
             <h4 class="font-weight-bold dark-grey-text my-4">Dr. Kiran K</h4>
-            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Councelor</strong></h6>
+            <h6 class="text-uppercase grey-text mb-3"><strong>Branch Counselor</strong></h6>
 
         </div>
 </section>
