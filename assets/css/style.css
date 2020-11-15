@@ -2038,7 +2038,7 @@ section {
   background-color: #f1f1f1;
 }
 /* styling of the SIG group */
-.sig-button: hover{
+.sig-button:hover{
   opacity:0.7;
 }
 /* preloader animation  */
