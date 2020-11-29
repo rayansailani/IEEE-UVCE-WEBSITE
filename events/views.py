@@ -101,7 +101,7 @@ def sig_view(request):
     context = {
         'events': events,
     }
-    if request.user.is_superuser or request.user == 'rayanbackup1@gmail.com' or request.user == 'uvce.ieee@gmail.com':
+    if request.user.is_superuser or request.user == 'WEB DEV SIG IEEE' or request.user.username == 'Approval Team':
         context['approval'] = approval
     else:
         context['approval'] = None
