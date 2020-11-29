@@ -13,12 +13,7 @@ from events.forms import CreateUpdateForm
 from django.conf import settings
 User = settings.AUTH_USER_MODEL
 # pagination display
-
-
 # displays the likes
-
-
-#
 # displays all events that have been created so far
 
 
@@ -28,13 +23,32 @@ def events_list(request):
     event_today = events.filter(date=datetime.date.today())
     eventold = events.filter(date__lt=datetime.date.today())
     eventnew = events.filter(date__gt=datetime.date.today())
+    page = request.GET.get('page', 1)
+    eventscount = eventold.count()
+    print(eventscount)
+    paginator = Paginator(eventold, 3)
+    try:
+        eventold = paginator.page(1)
+    except:
+        pass
     content = {
         'events': events,
         'event_today': event_today,
         'eventold': eventold,
         'eventnew': eventnew,
+        'eventscount': eventscount,
+        'three': 3,
     }
     return render(request, 'events/events_list.html', content)
+
+
+def old_events_view(request):
+    events = Event.objects.all().order_by('date')
+    eventold = events.filter(date__lt=datetime.date.today())
+    context = {
+        'eventold': eventold,
+    }
+    return render(request, 'events/events_old.html', context)
 
 # displays indivisual views
 
@@ -83,13 +97,14 @@ def student_view(request):
 def sig_view(request):
     user = request.user
     events = Event.objects.filter(author=user)
-    # approval = Event.objects.exclude(author=user)
-    # approval = approval.objects.filter(is_approved=False)
     approval = Event.objects.filter(is_approved=False).exclude(author=user)
     context = {
         'events': events,
-        'approval': approval,
     }
+    if request.user.is_superuser or request.user == 'rayanbackup1@gmail.com' or request.user == 'uvce.ieee@gmail.com':
+        context['approval'] = approval
+    else:
+        context['approval'] = None
     if request.user.is_sig_head:
         return render(request, 'events/events_dashboard.html', context)
     return redirect('articles:s_dashboard')
@@ -156,6 +171,9 @@ def event_create(request):
                 # save article to db
                 instance = form.save(commit=False)
                 instance.author = request.user
+                if request.user.is_superuser:
+                    instance.is_approved = True
+                    instance.approved_by = request.user
                 instance.save()
                 # change this to the dashboard later
                 return redirect('articles:dashboard')

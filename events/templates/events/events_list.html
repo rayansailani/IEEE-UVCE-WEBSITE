@@ -57,8 +57,15 @@
         <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
       </div>
       {% endfor %}
+
     </div>
+    {% if eventscount > three %}
+    <a class="btn btn-info btn-block my-4" style="background-color: #37517e;max-width:45%;margin:auto;"
+      href="{% url 'articles:old_events' %}">More
+      events </a>
+    {% endif %}
   </div>
+
 </section>
 
 {% endif %} {% endblock %}

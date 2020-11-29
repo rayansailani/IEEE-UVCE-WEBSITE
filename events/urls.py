@@ -14,4 +14,5 @@ urlpatterns = [
     path('<slug>/edit', views.edit_view, name='edit'),
     path('<slug>/delete', views.delete_view, name="delete"),
     path('<slug>/approve', views.approve_view, name="approve"),
+    path('evold', views.old_events_view, name='old_events'),
 ]
