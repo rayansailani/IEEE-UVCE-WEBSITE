@@ -15,6 +15,7 @@ class CreateEvent(forms.ModelForm):
         'placeholder': 'Dont Enter Anythin here!',
         'name': 'slug',
         'id': 'id_slug',
+        'maxlength': '100',
     }))
     date = forms.DateField(widget=forms.DateInput(attrs={
         'class': 'form-control',
@@ -24,7 +25,7 @@ class CreateEvent(forms.ModelForm):
         'class': 'form-control',
         'type': 'time',
     }))
-    location = forms.CharField(max_length=21, widget=forms.TextInput(attrs={
+    location = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Location of the event in college',
     }))
@@ -36,9 +37,10 @@ class CreateEvent(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Enter Link for Registration'
     }))
-    orgzer = forms.CharField(max_length=40, widget=forms.TextInput(attrs={
+    orgzer = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Organizer of the Event'
+        'placeholder': 'Organizer of the Event',
+        'maxlength': '100',
     }))
     # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
     #     'class': 'form-control',
@@ -86,7 +88,7 @@ class CreateUpdateForm(forms.ModelForm):
 
 
 class UpdateBlogPostForm(forms.ModelForm):
-    event_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={
+    event_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Event Name',
         'name': 'event_name',
@@ -97,6 +99,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         'placeholder': 'Dont Enter Anythin here!',
         'name': 'slug',
         'id': 'id_slug',
+        'maxlength': '100',
     }))
     date = forms.DateField(widget=forms.DateInput(attrs={
         'class': 'form-control',
@@ -106,9 +109,10 @@ class UpdateBlogPostForm(forms.ModelForm):
         'class': 'form-control',
         'type': 'time',
     }))
-    location = forms.CharField(max_length=21, widget=forms.TextInput(attrs={
+    location = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Location of the event in college',
+        'maxlength': '100',
     }))
     description = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={
         'class': 'form-control',
@@ -120,7 +124,8 @@ class UpdateBlogPostForm(forms.ModelForm):
     }))
     orgzer = forms.CharField(max_length=40, widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Organizer of the Event'
+        'placeholder': 'Organizer of the Event',
+        'maxlength': '100',
     }))
     # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
     #     'class': 'form-control',

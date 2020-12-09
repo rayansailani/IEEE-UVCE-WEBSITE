@@ -6,14 +6,14 @@ User = settings.AUTH_USER_MODEL
 
 class Event(models.Model):
     event_name = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=100)
     date = models.DateField()
     time = models.TimeField()
     location = models.CharField(max_length=100)
     reg = models.URLField()
     description = models.TextField(max_length=1000, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    orgzer = models.CharField(max_length=40)
+    orgzer = models.CharField(max_length=100)
     winners = models.TextField(blank=True, default='Not Yet Decided')
     # poster = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
