@@ -86,7 +86,7 @@ class CreateUpdateForm(forms.ModelForm):
 
 
 class UpdateBlogPostForm(forms.ModelForm):
-    event_name = forms.CharField(max_length=21, widget=forms.TextInput(attrs={
+    event_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Event Name',
         'name': 'event_name',

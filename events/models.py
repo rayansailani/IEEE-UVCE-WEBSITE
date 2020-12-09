@@ -5,7 +5,7 @@ User = settings.AUTH_USER_MODEL
 
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=21)
+    event_name = models.CharField(max_length=50)
     slug = models.SlugField()
     date = models.DateField()
     time = models.TimeField()
