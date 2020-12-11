@@ -20,6 +20,11 @@
 
   <div class="d-flex justify-content-around"></div>
   <p>
+    If you want to place links in the description please use this snippet and copy and paste it in the section.
+    click on this <a href="#" onclick="simple()">Link</a> to copy the snippet and paste it in the required destination.
+    anchor tag.
+  </p>
+  <p>
     * Once an event is registered, it must be approved by the approval commitee.
     This approval involves checking of all types of factual information and
     errors.
@@ -31,6 +36,10 @@
 <!-- Default form login -->
 <!-- JavaScript to ensure the slugs are filled properly -->
 <script>
+  function simple() {
+    str = " <a href='yourlink.com'>your link</a>"
+    alert(str)
+  }
   const titleInput = document.querySelector("input[name=event_name]");
   const slugInput = document.querySelector("input[name=slug]");
 
