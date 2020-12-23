@@ -4,7 +4,7 @@ from .models import Event, Update
 
 
 class CreateEvent(forms.ModelForm):
-    event_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+    event_name = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Event Name',
         'name': 'event_name',
@@ -15,7 +15,7 @@ class CreateEvent(forms.ModelForm):
         'placeholder': 'Dont Enter Anythin here!',
         'name': 'slug',
         'id': 'id_slug',
-        'maxlength': '100',
+        'maxlength': '400',
     }))
     date = forms.DateField(widget=forms.DateInput(attrs={
         'class': 'form-control',
@@ -40,7 +40,7 @@ class CreateEvent(forms.ModelForm):
     orgzer = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Organizer of the Event',
-        'maxlength': '100',
+        'maxlength': '200',
     }))
     # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
     #     'class': 'form-control',
@@ -63,7 +63,7 @@ class CreateUpdateForm(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Name of announcement'
     }))
-    Update = forms.CharField(max_length=250, widget=forms.Textarea(attrs={
+    Update = forms.CharField(max_length=500, widget=forms.Textarea(attrs={
         'class': 'form-control',
         'placeholder': 'Body of announcement'
     }))
@@ -88,7 +88,7 @@ class CreateUpdateForm(forms.ModelForm):
 
 
 class UpdateBlogPostForm(forms.ModelForm):
-    event_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+    event_name = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Event Name',
         'name': 'event_name',
@@ -99,7 +99,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         'placeholder': 'Dont Enter Anythin here!',
         'name': 'slug',
         'id': 'id_slug',
-        'maxlength': '100',
+        'maxlength': '400',
     }))
     date = forms.DateField(widget=forms.DateInput(attrs={
         'class': 'form-control',
@@ -125,7 +125,7 @@ class UpdateBlogPostForm(forms.ModelForm):
     orgzer = forms.CharField(max_length=40, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Organizer of the Event',
-        'maxlength': '100',
+        'maxlength': '200',
     }))
     # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
     #     'class': 'form-control',

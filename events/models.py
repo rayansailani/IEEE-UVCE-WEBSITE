@@ -5,15 +5,15 @@ User = settings.AUTH_USER_MODEL
 
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
+    event_name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=400)
     date = models.DateField()
     time = models.TimeField()
     location = models.CharField(max_length=100)
     reg = models.URLField()
     description = models.TextField(max_length=1000, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    orgzer = models.CharField(max_length=100)
+    orgzer = models.CharField(max_length=200)
     winners = models.TextField(blank=True, default='Not Yet Decided')
     # poster = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
@@ -35,8 +35,8 @@ class Event(models.Model):
 
 
 class Update(models.Model):
-    title = models.CharField(max_length=50, blank=True)
-    Update = models.TextField(max_length=250)
+    title = models.CharField(max_length=100, blank=True)
+    Update = models.TextField(max_length=500)
     created = models.DateField(auto_now_add=True)
     till_when = models.DateField()
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
