@@ -43,7 +43,7 @@ def events_list(request):
 
 
 def old_events_view(request):
-    events = Event.objects.all().order_by('date')
+    events = Event.objects.all().order_by('-date')
     eventold = events.filter(date__lt=datetime.date.today())
     context = {
         'eventold': eventold,
