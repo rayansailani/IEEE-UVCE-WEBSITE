@@ -18,7 +18,7 @@ User = settings.AUTH_USER_MODEL
 
 
 def events_list(request):
-    events = Event.objects.all().order_by('date')
+    events = Event.objects.all().order_by('-date')
     events = events.filter(is_approved=True)
     event_today = events.filter(date=datetime.date.today())
     eventold = events.filter(date__lt=datetime.date.today())
