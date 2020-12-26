@@ -96,7 +96,7 @@ class UpdateBlogPostForm(forms.ModelForm):
     }))
     slug = forms.SlugField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Dont Enter Anythin here!',
+        'placeholder': 'Dont Enter Anything here!',
         'name': 'slug',
         'id': 'id_slug',
         'maxlength': '400',
@@ -122,7 +122,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Enter Link for Registration'
     }))
-    orgzer = forms.CharField(max_length=40, widget=forms.TextInput(attrs={
+    orgzer = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Organizer of the Event',
         'maxlength': '200',
