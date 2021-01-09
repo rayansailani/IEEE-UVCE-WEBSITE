@@ -10,7 +10,7 @@
         <p>Name: <b>{{ event.event_name }}</b></p>
         <p>Start Date: <b>{{ event.date }}</b></p>
         <p>Start Time: <b>{{ event.time }}</b></p>
-        <a href="{{event.reg}}">Link to register</a>
+        <a href="{{event.reg}}">Event Link</a>
         <br />
         <hr />
         <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
@@ -31,7 +31,7 @@
         <p>Name: <b>{{ event.event_name }}</b></p>
         <p>Start Date: <b>{{ event.date }}</b></p>
         <p>Time: <b>{{ event.time }}</b></p>
-        <a href="{{event.reg}}">Link to register</a>
+        <a href="{{event.reg}}">Event Link</a>
         <br />
         <hr />
         <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
