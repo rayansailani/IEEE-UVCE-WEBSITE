@@ -12,8 +12,9 @@ class CreateEvent(forms.ModelForm):
     }))
     slug = forms.SlugField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Dont Enter Anythin here!',
+        'placeholder': 'This is an auto completing field!',
         'name': 'slug',
+        'title': 'if it doesnt then type the thing on your with hyphens in between spaces',
         'id': 'id_slug',
         'maxlength': '400',
     }))
@@ -35,7 +36,7 @@ class CreateEvent(forms.ModelForm):
     }))
     reg = forms.URLField(widget=forms.URLInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Enter Link for Registration'
+        'placeholder': 'Enter the  Link associated with the Event ',
     }))
     orgzer = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
@@ -96,7 +97,8 @@ class UpdateBlogPostForm(forms.ModelForm):
     }))
     slug = forms.SlugField(widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Dont Enter Anything here!',
+        'placeholder': 'This is auto completing field!',
+        'title': 'if it doesnt then type the thing on your with hyphens in between spaces',
         'name': 'slug',
         'id': 'id_slug',
         'maxlength': '400',
@@ -120,7 +122,7 @@ class UpdateBlogPostForm(forms.ModelForm):
     }))
     reg = forms.URLField(widget=forms.URLInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Enter Link for Registration'
+        'placeholder': 'Enter the  Link associated with the Event ',
     }))
     orgzer = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
         'class': 'form-control',
