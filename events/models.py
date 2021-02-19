@@ -35,7 +35,7 @@ class Event(models.Model):
         url = reverse('articles:detail', args=(self.slug,))
         print(url)
         # <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
-        return f'<a href="{url}"> {self.event_name} </a>'
+        return f"<a href='{url}' class='list_element'> {self.event_name} </a>"
 
     class Meta:
         verbose_name = "Event"
