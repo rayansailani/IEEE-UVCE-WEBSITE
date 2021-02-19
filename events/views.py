@@ -1,7 +1,10 @@
+# from .utils import Calendar
+import calendar
+from calendar import HTMLCalendar
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from .models import Event
 from accounts.models import Account
 from django.contrib.auth.decorators import login_required
@@ -11,6 +14,14 @@ from events.models import Update
 from .forms import UpdateBlogPostForm
 from events.forms import CreateUpdateForm
 from django.conf import settings
+# from django.http import HttpResponse, HttpResponseRedirect
+# from datetime import timedelta
+# import calendar
+# from django.utils.safestring import mark_safe
+# from django.views import generic
+# from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.urls import reverse_lazy
+# from .utils import Calendar
 User = settings.AUTH_USER_MODEL
 # pagination display
 # displays the likes
@@ -55,7 +66,10 @@ def old_events_view(request):
 
 def event_detail(request, slug):
     today = datetime.date.today()
-    event = Event.objects.get(slug=slug)
+    try:
+        event = Event.objects.get(slug=slug)
+    except:
+        event = None
     content = {
         'event': event,
         "today": today,

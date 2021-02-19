@@ -15,4 +15,5 @@ urlpatterns = [
     path('<slug>/delete', views.delete_view, name="delete"),
     path('<slug>/approve', views.approve_view, name="approve"),
     path('evold', views.old_events_view, name='old_events'),
+
 ]

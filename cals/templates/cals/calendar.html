@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block footer %}
+
+{% endblock %}
+
+{% block content %}
+<section id="skills" class="skills" style="position: relative;">
+    <div class="section-title">
+        <h2>Calendar of events </h2>
+    </div>
+    <div class="" data-aos="fade-up">
+        <div class="clearfix">
+            <a class="btn btn-info left" href="{% url 'calendar' %}?{{ prev_month }}"> Previous Month </a>
+            <a class="btn btn-info right" href="{% url 'calendar' %}?{{ next_month }}"> Next Month </a>
+        </div>
+        {{calendar}}
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <hr>
+    <div class="footer-copyright text-center py-3" data-aos="fade-up">
+        <h5><a href="mailto:kennithkoshy@ieee.org"><i class="icofont-envelope"></i> Kennith O Koshy</a></h5>
+        <h6><a target="_blank"
+                href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
+                    class="icofont-google-map"></i>
+                UVCE, K.R Circle, B.R Ambedkar Veedhi, Bengaluru </a></h6>
+        © 2020 Copyright:
+        <a href="{% url 'home_page' %}"> IEEE UVCE</a>
+
+    </div>
+
+</footer>
+
+<style>
+    .calendar {
+        max-width: 98%;
+        margin: auto;
+        font-size: 13px;
+    }
+
+    .calendar tr,
+    .calendar td {
+        border: 1px solid black;
+    }
+
+    .calendar th {
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .calendar td {
+        width: 200px;
+        height: 150px;
+        padding: 20px 0px 0px 5px;
+    }
+
+    .month {
+        font-size: 25px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    ul {
+        height: 100%;
+        padding: 0px 5px 0px 20px;
+    }
+
+    a {
+        color: #17a2b8;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .btn {
+        outline: none;
+        color: black;
+        background-color: transparent;
+        box-shadow: 0 0 0 0;
+    }
+
+    .clearfix {
+        margin: 15px;
+    }
+</style>
+
+{% endblock %}

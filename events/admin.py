@@ -1,8 +1,14 @@
 from django.contrib import admin
 from .models import Event, Update
+import datetime
+# import calendar
+# from django.urls import reverse
+# from calendar import HTMLCalendar
+# from django.utils.safestring import mark_safe
 
 
 # configure the admin page later
+
 
 class EventAdmin(admin.ModelAdmin):
     list_display = (

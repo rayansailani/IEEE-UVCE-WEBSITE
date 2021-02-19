@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.db import models
 from django.conf import settings
 User = settings.AUTH_USER_MODEL
@@ -28,6 +29,13 @@ class Event(models.Model):
 
     def snippet(self):
         return self.description[:10] + '...'
+
+    @property
+    def get_html_url(self):
+        url = reverse('articles:detail', args=(self.slug,))
+        print(url)
+        # <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
+        return f'<a href="{url}"> {self.event_name} </a>'
 
     class Meta:
         verbose_name = "Event"

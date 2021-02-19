@@ -11,11 +11,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('events/', include('events.urls')),
     path('accounts/', include('accounts.urls')),
+    path('calendar/', include('cals.urls')),
     path('posts/', include('posts.urls')),
     path('', views.home, name="home_page"),
     path('team', views.teams, name="team"),
     path('register', views.reg_form, name="reg_form"),
-
+    path('rewards/1', views.rewards_1_view, name="reward1"),
 
     # for resetting password functionality
     path('reset_password/',
