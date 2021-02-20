@@ -16,7 +16,7 @@ urlpatterns = [
     path('', views.home, name="home_page"),
     path('team', views.teams, name="team"),
     path('register', views.reg_form, name="reg_form"),
-    path('rewards/1', views.rewards_1_view, name="reward1"),
+    path('rewards', views.rewards_1_view, name="rewards"),
 
     # for resetting password functionality
     path('reset_password/',
