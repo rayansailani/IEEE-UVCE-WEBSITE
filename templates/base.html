@@ -75,6 +75,17 @@
             <a href="{% url 'calendar' %}">Calendar</a>
           </li>
 
+
+          <li>
+            <a href="{% url 'rewards' %}">Rewards Programme</a>
+          </li>
+          <li>
+            <a href="{% url 'post' %}">Gallery</a>
+          </li>
+
+          <li>
+            <a href="{% url 'team' %}">Team</a>
+          </li>
           {% if user.is_authenticated %}
           <li class="drop-down ">
 
@@ -120,17 +131,6 @@
         </ul>
         </li>
         {% endif %}
-        <li>
-          <a href="{% url 'rewards' %}">Rewards Programme</a>
-        </li>
-        <li>
-          <a href="{% url 'post' %}">Gallery</a>
-        </li>
-
-        <li>
-          <a href="{% url 'team' %}">Team</a>
-        </li>
-
 
         </ul>
       </nav>
