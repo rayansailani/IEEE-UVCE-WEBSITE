@@ -185,7 +185,7 @@ def event_create(request):
                 # save article to db
                 instance = form.save(commit=False)
                 instance.author = request.user
-                if request.user.is_superuser:
+                if request.user.is_superuser or request.user.email == 'uvce.ieee@gmail.com':
                     instance.is_approved = True
                     instance.approved_by = request.user
                 instance.save()
