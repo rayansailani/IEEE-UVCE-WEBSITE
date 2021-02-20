@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <section id="skills" class="skills" style="position: relative;">
     <div class="section-title">
         <h2>rewards system</h2>
     </div>
     <div class="container">
-        <p> <span style="font-weight: bold;">Note:</span> It may take some time for the spreadsheets to update. </p>
+        <img class='center-block' style="max-width:100%; border:2px solid black;" loading="lazy"
+            src="{% static 'img/rewards-program-600.webp' %}" srcset="{% static 'img/rewards-program-600.webp' %} 600w,
+                {% static 'img/rewards-program-1000.webp' %} 1000w
+                " alt="">
+    </div>
+    <div class="section-title" style="margin-top:3rem;">
+        <h2>rewards table</h2>
     </div>
     <div class="container">
         <iframe style="width: 100%;height: 50vh;"
