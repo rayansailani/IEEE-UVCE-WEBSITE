@@ -11,7 +11,9 @@
     <p class="info" style="margin-top: 20px">Start Date: <b>{{event.date}}</b></p>
     <p class="info">Start Time: <b>{{event.time}}</b></p>
     <p class="info">Organizer(s): <b>{{event.orgzer}}</b></p>
+    {% if event.location %}
     <p>Will be held at(/in): <b>{{event.location}}</b></p>
+    {% endif %}
     <p>Description: <b>{{event.description | safe | linebreaks}}</b></p>
     {% if event.winners != 'Not Yet Decided' %}
     <p>Winner(s): <b>{{event.winners | safe | linebreaks }}</b></p>

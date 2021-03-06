@@ -26,9 +26,10 @@ class CreateEvent(forms.ModelForm):
         'class': 'form-control',
         'type': 'time',
     }))
-    location = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
+    location = forms.CharField(required=False, max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Location of the event in college',
+
     }))
     description = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={
         'class': 'form-control',
@@ -111,7 +112,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         'class': 'form-control',
         'type': 'time',
     }))
-    location = forms.CharField(widget=forms.TextInput(attrs={
+    location = forms.CharField(required=False, widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Location of the event in college',
         'maxlength': '100',
