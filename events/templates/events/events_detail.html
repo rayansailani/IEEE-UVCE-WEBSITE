@@ -18,11 +18,11 @@
     {% if event.winners != 'Not Yet Decided' %}
     <p>Winner(s): <b>{{event.winners | safe | linebreaks }}</b></p>
     {% endif %}
-    {% if event.date >= today %}
+
     {% if event.reg %}
     <a href="{{event.reg}}">Event Link</a>
     {% endif %}
-    {% endif %}
+
   </div>
 </div>
 
