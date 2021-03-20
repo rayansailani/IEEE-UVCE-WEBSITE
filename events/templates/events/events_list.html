@@ -52,6 +52,9 @@
         <p>Name: <b>{{ event.event_name }}</b></p>
         <p>Start Date: <b>{{ event.date }}</b></p>
         <p>Start Time: <b>{{ event.time }}</b></p>
+        {% if event.remember_link %}
+        <a href="{{event.reg}}">Event Link</a>
+        {% endif %}
         <br />
         <hr />
         <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>

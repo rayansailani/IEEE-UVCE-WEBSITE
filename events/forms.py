@@ -44,6 +44,12 @@ class CreateEvent(forms.ModelForm):
         'placeholder': 'Organizer of the Event',
         'maxlength': '200',
     }))
+    remember_link = forms.BooleanField(widget=forms.CheckboxInput(
+        attrs={
+            'class': 'form-check-input',
+            'type': 'checkbox',
+        }
+    ), help_text="Do you want the event link to be display after the event date is over?")
     # poster = forms.ImageField(required=False, widget=forms.TextInput(attrs={
     #     'class': 'form-control',
     #     'type': 'file'
@@ -57,7 +63,7 @@ class CreateEvent(forms.ModelForm):
 
         model = models.Event
         fields = ['event_name', 'slug', 'date', 'time', 'location',
-                  'reg', 'description', 'orgzer']
+                  'reg', 'description', 'orgzer', 'remember_link']
 
 
 class CreateUpdateForm(forms.ModelForm):
@@ -139,10 +145,17 @@ class UpdateBlogPostForm(forms.ModelForm):
         'Placeholer': 'Enter the winners if decided'
     }))
 
+    remember_link = forms.BooleanField(widget=forms.CheckboxInput(
+        attrs={
+            'class': 'form-check-input',
+            'type': 'checkbox',
+        }
+    ), help_text="Do you want the event link to be display after the event date is over?")
+
     class Meta:
         model = Event
         fields = ['event_name',  'date', 'time', 'location', 'slug',
-                  'reg', 'description', 'orgzer', 'winners']
+                  'reg', 'description', 'orgzer', 'winners', 'remember_link']
 
     def save(self, commit=True):
         event = self.instance

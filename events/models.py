@@ -20,6 +20,7 @@ class Event(models.Model):
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     #member_exclusive = models.BooleanField(default=None, blank=True)
     is_approved = models.BooleanField(default=False, blank=True)
+    remember_link = models.BooleanField(default=False)
     approved_by = models.CharField(
         max_length=40,  null=True, blank=True, default=" ")
     # likes = models.ManyToManyField(User, related_name="like_event")

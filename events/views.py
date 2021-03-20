@@ -152,6 +152,7 @@ def edit_view(request, slug):
                     'winners': event.winners,
                     'description': event.description,
                     'slug': event.slug,
+                    'remember_link': event.remember_link,
                 }
             )
         return render(request, 'events/edit.html', {'form': form})

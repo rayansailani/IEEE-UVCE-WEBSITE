@@ -20,7 +20,9 @@
     {% endif %}
 
     {% if event.reg %}
+    {% if event.remember_link %}
     <a href="{{event.reg}}">Event Link</a>
+    {% endif %}
     {% endif %}
 
   </div>
