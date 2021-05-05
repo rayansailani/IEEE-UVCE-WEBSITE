@@ -31,11 +31,11 @@ class CreateEvent(forms.ModelForm):
         'placeholder': 'Location of the event in college',
 
     }))
-    description = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={
+    description = forms.CharField(max_length=2000, widget=forms.Textarea(attrs={
         'class': 'form-control',
         'placeholder': 'Enter Description'
     }))
-    reg = forms.URLField(required=False, widget=forms.URLInput(attrs={
+    reg = forms.URLField(widget=forms.URLInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter the  Link associated with the Event ',
     }))
@@ -44,7 +44,7 @@ class CreateEvent(forms.ModelForm):
         'placeholder': 'Organizer of the Event',
         'maxlength': '200',
     }))
-    remember_link = forms.BooleanField(widget=forms.CheckboxInput(
+    remember_link = forms.BooleanField(required=False, widget=forms.CheckboxInput(
         attrs={
             'class': 'form-check-input',
             'type': 'checkbox',
@@ -123,7 +123,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         'placeholder': 'Location of the event in college',
         'maxlength': '100',
     }))
-    description = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={
+    description = forms.CharField(max_length=2000, widget=forms.Textarea(attrs={
         'class': 'form-control',
         'placeholder': 'Enter Description'
     }))
@@ -140,12 +140,12 @@ class UpdateBlogPostForm(forms.ModelForm):
     #     'class': 'form-control',
     #     'type': 'file'
     # }))
-    winners = forms.CharField(widget=forms.Textarea(attrs={
+    winners = forms.CharField(required=False, widget=forms.Textarea(attrs={
         'class': 'form-control',
         'Placeholer': 'Enter the winners if decided'
     }))
 
-    remember_link = forms.BooleanField(widget=forms.CheckboxInput(
+    remember_link = forms.BooleanField(required=False,  widget=forms.CheckboxInput(
         attrs={
             'class': 'form-check-input',
             'type': 'checkbox',

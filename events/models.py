@@ -12,7 +12,7 @@ class Event(models.Model):
     time = models.TimeField()
     location = models.CharField(max_length=100)
     reg = models.URLField(blank=True)
-    description = models.TextField(max_length=1000, blank=True)
+    description = models.TextField(max_length=2000, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     orgzer = models.CharField(max_length=200)
     winners = models.TextField(blank=True, default='Not Yet Decided')
