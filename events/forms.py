@@ -35,7 +35,7 @@ class CreateEvent(forms.ModelForm):
         'class': 'form-control',
         'placeholder': 'Enter Description'
     }))
-    reg = forms.URLField(widget=forms.URLInput(attrs={
+    reg = forms.URLField(required=False, widget=forms.URLInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter the  Link associated with the Event ',
     }))
