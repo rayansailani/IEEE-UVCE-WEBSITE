@@ -28,7 +28,7 @@ SECRET_KEY = '(=kqy5g@f^hfj(4rq_&*82+bnl+yt0qgjg%7@)!l9mgo3_n8rx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com',
+ALLOWED_HOSTS = ['ieee---uvce.herokuapp.com', "https://ieee----uvce.herokuapp.com/",
                  '127.0.0.1', 'www.ieeeuvce.in']
 
 
