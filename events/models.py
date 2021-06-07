@@ -15,7 +15,7 @@ class Event(models.Model):
     description = models.TextField(max_length=2000, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     orgzer = models.CharField(max_length=200)
-    winners = models.TextField(blank=True, default='Not Yet selected')
+    winners = models.TextField(blank=True, default='Not Yet Decided')
     # poster = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
 
@@ -27,7 +27,7 @@ class Event(models.Model):
     #member_exclusive = models.BooleanField(default=None, blank=True)
 
     def __str__(self):
-        return self.event_name+" "
+        return self.event_name
 
     def snippet(self):
         return self.description[:10] + '...'
@@ -35,8 +35,6 @@ class Event(models.Model):
     @property
     def get_html_url(self):
         url = reverse('articles:detail', args=(self.slug,))
-        print(url)
-        # <a href="{% url 'articles:detail' slug=event.slug %}">More info</a>
         return f"<a href='{url}' class='list_element'> {self.event_name} </a>"
 
     class Meta:
