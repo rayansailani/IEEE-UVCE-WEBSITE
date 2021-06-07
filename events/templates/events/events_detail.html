@@ -15,7 +15,7 @@
     <p>Will be held at(/in): <b>{{event.location}}</b></p>
     {% endif %}
     <p>Description: <b>{{event.description | safe | linebreaks}}</b></p>
-    {% if event.winners != 'Not Yet Decided' %}
+    {% if event.winners != 'Not Yet selected' %}
     <p>Winner(s): <b>{{event.winners | safe | linebreaks }}</b></p>
     {% endif %}
 
