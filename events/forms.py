@@ -28,7 +28,7 @@ class CreateEvent(forms.ModelForm):
     }))
     location = forms.CharField(required=False, max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
-        'placeholder': 'Location of the event in college',
+        'placeholder': 'Location of the event in college/online',
 
     }))
     description = forms.CharField(max_length=2000, widget=forms.Textarea(attrs={

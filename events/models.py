@@ -27,7 +27,7 @@ class Event(models.Model):
     #member_exclusive = models.BooleanField(default=None, blank=True)
 
     def __str__(self):
-        return self.event_name
+        return self.event_name + " "
 
     def snippet(self):
         return self.description[:10] + '...'
