@@ -6,4 +6,4 @@ ieee-website\Scripts\activate\
 git clone https://github.com/rayansailani/IEEE-UVCE-WEBSITE.git\
 cd IEEE-UVCE-WEBSITE\
 pip install -r requirements.txt\
-python manage.py runserver\
+python manage.py runserver
