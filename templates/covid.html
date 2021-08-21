@@ -1,0 +1,550 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    /* #skills {
+        margin-top: -28px !important;
+    } */
+
+    .social-distance {
+        background-color: #37517e;
+        color: #fff;
+        min-height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        margin-top: 5%;
+        font-size: 40px;
+        transition: 2s all;
+        text-align: center;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .text2 {
+        font-size: 20px;
+        transition: 2s all;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .padding {
+        padding: 2rem;
+    }
+
+    .ima {
+        width: 25%;
+    }
+
+    .spaced {
+        letter-spacing: 30px;
+    }
+
+    .spaced2 {
+        letter-spacing: 10px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: x;
+        justify-content: center;
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    .icons .advice {
+        margin: 0px;
+        margin: 0% 0% 5%0%;
+        transition: 0.5s all;
+        text-align: center;
+        animation: anim 2s forwards;
+        font-size: 20px;
+    }
+
+    .icons .advice .fas {
+        font-size: 30px;
+        animation: anim 2s forwards;
+    }
+
+    .heading {
+        color: #37517e;
+    }
+
+    @keyframes anim {
+        to {
+            padding: 16px;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+
+        #usemask {
+            margin-top: 10px;
+        }
+
+        .spaced {
+            letter-spacing: 8px;
+        }
+
+        .spaced {
+            letter-spacing: 8px;
+        }
+
+        .ima {
+            width: 60%;
+        }
+
+        .text {
+            margin-top: 12%;
+            font-size: 40px;
+            transition: 2s all;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<!-- ?    <title>Covid Awareness</title> -->
+<!--font awesome-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<!--bootstrap js-->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+<!--google font poppins-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<div style="font-family:'Poppins', sans-serif;background-color:black;">
+    <div class="animated bounce" id="part2" style="background-color: white;">
+        <!-- <h1 class="responsive-md text-center mt-2" style="color: black;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Covid Awareness</h1> -->
+
+        <div class="social-distance">
+            <h1 class="text">
+                Social Distancing
+            </h1>
+            <p class="text2 text-center">
+                Help prevent the spread of Coronavirus by maintaining at least 1.8m (6ft) between you and others.
+            </p>
+            <div class="icons">
+                <span class="advice">
+                    <img class="ima" src="https://image.flaticon.com/icons/png/512/2913/2913409.png" alt=""
+                        class="center">
+                    <h3>Wash your hands</h3>
+                </span>
+                <span class="advice">
+                    <img class="ima" src="https://image.flaticon.com/icons/png/512/3023/3023728.png" alt=""
+                        id="usemask">
+                    <h3>Use mask</h3>
+                </span>
+                <span class="advice">
+                    <img class="ima" src="https://image.flaticon.com/icons/png/512/2732/2732923.png" alt="">
+                    <h3>Avoid physical contact</h3>
+                </span>
+            </div>
+        </div>
+
+        <div class="article padding">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3 class="heading"><Strong>HELP OTHERS BY</Strong></h3>
+                    <h3 class="heading"><strong>DONATING PLASMA</strong></h3>
+                    <hr>
+                    <h4><strong>Who all can donate for plasma?</strong></h4>
+                    <p>Even though you may be enthusiastic about donating Plasma/blood, you may not be eligible. This is
+                        determined through an initial screening process.</p>
+                    <p><strong>Eligibility of Donor</strong></p>
+                    <p>The following criteria should be met for potential donors:</p>
+                    <ol>
+                        <li><strong>Age: &gt; 18 Years</strong></li>
+                        <li><strong>Male or nulliparous female donor of weight &gt; 55 Kg</strong></li>
+                        <li><strong>Prior diagnosis of Covid-19 documented by a laboratory test(RT-PCR) with symptomatic
+                                disease with at least fever and cough</strong></li>
+                        <li><strong>&nbsp;Complete resolution of Symptoms at least 28 days prior to donation; or
+                                Complete resolution of symptoms at least 14 days prior to donation and two negative real
+                                time PCR test for COVID-19&nbsp; from nasopharyngeal swab, collected 24 hour
+                                apart.</strong></li>
+                    </ol>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4><strong>Is it safe to donate Plasma?</strong></h4>
+                    <p>Blood and plasma have been used to treat many other conditions, and they’re usually very safe.
+                        The risk of contracting&nbsp;COVID-19&nbsp;infection from receiving convalescent plasma therapy
+                        &nbsp;is very low because the plasma donor has fully recovered from the infection.</p>
+                    <h4><strong>What is Antibody Test</strong>?</h4>
+                    <p>An antibody test is a screening for antibodies in blood. It is also &nbsp;called a serology
+                        test.The antibody test isn’t checking for the virus itself. Instead, it looks to see whether
+                        your immune system — your body’s defense against illness — has responded to the infection.</p>
+                    <h4><strong>What’s the Difference Between a Coronavirus Test and an Antibody Test?</strong></h4>
+                    <p>A coronavirus test, sometimes called a diagnostic test, looks for signs of active virus. It’s
+                        simpler and faster than an antibody test. But it tells you only if you have the virus in your
+                        body at the moment when you’re tested.An antibody test shows that you had the virus at some
+                        point in the past. It could be gone, or you could still be contagious.</p>
+                </div>
+
+                <div class="col-12 col-md-4" style="text-align: center;">
+                    <!-- <img class="responsive" height='200' src='/ca1.gif' width='200'> -->
+                    <h5><strong>How many days a recovered body can take to develop antibody</strong></h5>
+                    <p>Antibodies develops in 14&nbsp; to 28 days, and it will last till 2-3 months.</p>
+                    <h6><strong>What is (RT-PCR) Test:</strong></h6>
+                    <p>Reverse transcription PCR, or RT-PCR is a variation of PCR, or polymerase chain reaction.</p>
+                    <p><strong>Plasma Compatibility Chart:</strong></p>
+                    <hr>
+                    <img class="responsive"
+                        src="http://image.slideserve.com/50186/plasma-abo-and-rh-compatibility-l.jpg" alt="" srcset="">
+                    <hr>
+                    <a href="https://plasmadonor.in/donor-form" target="_blank">
+                        <button type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                            style="color: aliceblue; background-color:black; border:1px solid aliceblue;">DONOR
+                            REGISTRATION
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="article padding">
+            <div class="row">
+
+                <div class="col-12 col-md-4">
+                    <h1 class="heading"><strong>IMPORTANCE OF VACCINATION</strong></h1>
+                    <hr>
+                    <ul>
+                        <li><strong>Saves lives:</strong> Vaccines are recommended for infants because their immune
+                            systems are not developed fully and so they are prone to many diseases. It can save your
+                            child’s life.</li>
+                        <li><strong>Saves money:</strong>Vaccine preventable diseases are more serious and the
+                            treatment, if possible will cost a lot. It is better to get vaccinated before and prevent
+                            contracting these diseases rather than going through the painful hospital process and bills
+                            later on.</li>
+                    </ul>
+                    <img class="responsive" width="350" height="auto"
+                        src="https://static.timesofisrael.com/atlantajewishtimes/uploads/2019/02/HW_Vaccinations-Shot_2-22-19-1024x640.jpg">
+
+                    <hr>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <br>
+                    <ul>
+                        <li><strong>Prevents dreadful diseases:</strong> Vaccines prevent dreadful diseases like Polio
+                            which can lead to deformities in the child. These diseases if not prevented can lead to
+                            paralysis, amputation of limbs, hospitalization and also death.</li>
+                        <li><strong>Vaccines are safe:</strong>All the vaccines today are safe for your child. It is a
+                            very rare case where a vaccine would have a side effect. The chances of protecting your
+                            child from a preventable disease are much higher than that of a side effect.</li>
+                        <li><strong>Eradicates diseases:</strong>Vaccinations protect not only you but also others. If
+                            we continue vaccination, there is a possibility that some of the diseases of today would no
+                            longer be seen in the future. These diseases would get eradicated. Taking a vaccination not
+                            only protects you from a certain disease but also protects the future population.</li>
+                        <li><strong>Vaccines help in the long run:</strong>When a baby is vaccinated, his/her immune
+                            system becomes tougher and the child does not get ill very easily. This also continues in
+                            the long run. If not vaccinated, these diseases would effect the child when he/she grows up
+                            and these diseases could have effects on the child’s further development.</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <br>
+                    <ul>
+                        <li><strong>Protects others as well:</strong>Young babies, who are not vaccinated, get diseases
+                            like measles which can spread to their siblings or to the older people in the family. This
+                            reoccurrence of diseases can lead to fatal consequences. Getting your infant vaccinated not
+                            only protects your family, but also helps prevent the spread of these diseases.</li>
+                    </ul>
+                    <h3>What are the benefits of getting vaccinated?</h3>
+                    <hr>
+                    <p>
+                        The COVID-19 vaccines produce protection against the disease, as a result of developing an
+                        immune response to the SARS-Cov-2 virus.
+                        Developing immunity through vaccination means there is a reduced risk of developing the illness
+                        and its consequences. This immunity
+                        helps you fight the virus if exposed. Getting vaccinated may also protect people around you,
+                        because if you are protected from getting
+                        infected and from disease, you are less likely to infect someone else. This is particularly
+                        important to protect people at increased risk
+                        for severe illness from COVID-19, such as healthcare providers, older or elderly adults, and
+                        people with other medical conditions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="article padding">
+            <h1 class="heading" style="text-align: center;"><strong>FOR INFORMATION ON COVID-19 VACCINE</strong></h1>
+            <hr>
+            <div class="row">
+                <div style="padding: 0% 6%; text-align: center;" class="col-12 col-md-4">
+                    <p style="text-align: center;"><strong>Vaccination Registration On</strong></p>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 5% 19%;"
+                        href="https://selfregistration.cowin.gov.in/" target="_blank">Co-WIN
+                    </a>
+                    <br>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 5% 2%;"
+                        href="https://www.aarogyasetu.gov.in/applink/" target="_blank">Aarogya Setu App
+                    </a>
+                    <br>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 5% 20%;"
+                        href="https://web.umang.gov.in/web_new/login?redirect_to=&utm_source=MyGov&utm_medium=MyGovCovid-19"
+                        target="_blank">UMANG
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4" style="text-align: center;">
+                    <p><strong>How to book a COVID-19 Vaccination appointment on CoWIN if you're 18 years or older
+                        </strong></p>
+                    <br>
+                    <iframe class="responsive" width="449" height="252" src="https://www.youtube.com/embed/io-oreIAuTM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div style="margin: auto; text-align: center;" class="col-12 col-md-4">
+                    <p style="text-align: center;"><strong>Some Of The Important Links</strong></p>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 4%;"
+                        href="https://self4society.mygov.in/covid-resources/?utm_source=MyGov&utm_medium=MyGovCovid-19"
+                        target="_blank">COVID RESOURCES
+                    </a>
+                    <br>
+                    <p style="text-align: center;"><strong>BBMP Covid-19 Hospital Bed Status</strong></p>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3 "
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 4% 10%;"
+                        href="https://covid19.karnataka.gov.in/english" target="_blank">Check here
+                    </a>
+                    <br>
+                    <a type="button" class="btn btn-light res-pad res-mar rounded-pill pulse p-3"
+                        style="color: aliceblue; background-color:black; border:1px solid aliceblue; padding: 4% 14%;"
+                        href="https://www.pmcares.gov.in/en/web/contribution/donate_india" target="_blank">PM CARE
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /*Media Queries*/
+    @media (min-width:320px) {
+        .res-game {
+            padding-left: 8vw;
+            padding-right: 8vw;
+        }
+
+        .responsive-md {
+            font-size: 24px;
+        }
+
+        .responsive-lg {
+            font-size: 36px;
+        }
+
+        .responsive-tx {
+            font-size: 16px;
+        }
+
+        .res-pad {
+            padding: 10px;
+        }
+
+        .res-pad-flag {
+            padding: 8px;
+        }
+
+        .res-mar {
+            margin: 8px;
+        }
+
+        #skills {
+            margin-top: -30px !important;
+        }
+
+        /* smartphones, iPhone, portrait 480x320 phones */
+    }
+
+    @media (min-width:481px) {
+        .res-game {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .responsive-md {
+            font-size: 64px;
+        }
+
+        .responsive-lg {
+            font-size: 88px;
+        }
+
+        .responsive-tx {
+            font-size: 32px;
+        }
+
+        .res-pad {
+            padding: 20px;
+        }
+
+        .res-pad-flag {
+            padding: 24px;
+        }
+
+        .res-mar {
+            margin: 16px;
+        }
+
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    }
+
+    @media (min-width:641px) {
+        .res-game {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .responsive-md {
+            font-size: 64px;
+        }
+
+        .responsive-lg {
+            font-size: 88px;
+        }
+
+        .responsive-tx {
+            font-size: 32px;
+        }
+
+        .res-pad {
+            padding: 20px;
+        }
+
+        .res-pad-flag {
+            padding: 24px;
+        }
+
+        .res-mar {
+            margin: 16px;
+        }
+
+
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    }
+
+    @media (min-width:961px) {
+        .res-game {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .responsive-md {
+            font-size: 64px;
+        }
+
+        .responsive-lg {
+            font-size: 88px;
+        }
+
+        .responsive-tx {
+            font-size: 32px;
+        }
+
+        .res-pad {
+            padding: 20px;
+        }
+
+        .res-pad-flag {
+            padding: 24px;
+        }
+
+        .res-mar {
+            margin: 16px;
+        }
+
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+    }
+
+    @media (min-width:1025px) {
+        .res-game {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .responsive-md {
+            font-size: 64px;
+        }
+
+        .responsive-lg {
+            font-size: 88px;
+        }
+
+        .responsive-tx {
+            font-size: 32px;
+        }
+
+        .res-pad {
+            padding: 20px;
+        }
+
+        .res-pad-flag {
+            padding: 24px;
+        }
+
+        .res-mar {
+            margin: 16px;
+        }
+
+        /* big landscape tablets, laptops, and desktops */
+    }
+
+    @media (min-width:1281px) {
+        .res-game {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
+        .responsive-md {
+            font-size: 64px;
+        }
+
+        .responsive-lg {
+            font-size: 88px;
+        }
+
+        .responsive-tx {
+            font-size: 32px;
+        }
+
+        .res-pad {
+            padding: 20px;
+        }
+
+        .res-pad-flag {
+            padding: 24px;
+        }
+
+        .res-mar {
+            margin: 16px;
+        }
+
+        /* hi-res laptops and desktops */
+    }
+</style>
+</body>
+{% endblock %}
