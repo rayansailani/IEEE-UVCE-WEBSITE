@@ -5,6 +5,8 @@ User = settings.AUTH_USER_MODEL
 # Create your models here.
 
 
+
+
 class Event(models.Model):
     event_name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=400)
