@@ -5,7 +5,12 @@ User = settings.AUTH_USER_MODEL
 # Create your models here.
 
 
-
+event_choices = (("Elite Event", "Elite Event"),
+        ("Monthly Event", "Monthly Event"),
+        ("General Event", "General Event"),
+        ("Workshop", "Workshop"),
+        ("Webinar/Tech Talk", "Webinar/Tech Talk")
+)
 
 class Event(models.Model):
     event_name = models.CharField(max_length=200)
@@ -20,13 +25,17 @@ class Event(models.Model):
     winners = models.TextField(blank=True, default='Not Yet Decided')
     # poster = models.ImageField(default='default.png', blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
-
     is_approved = models.BooleanField(default=False, blank=True)
     remember_link = models.BooleanField(default=False)
     approved_by = models.CharField(
         max_length=40,  null=True, blank=True, default=" ")
     # likes = models.ManyToManyField(User, related_name="like_event")
     #member_exclusive = models.BooleanField(default=None, blank=True)
+    catagory = models.CharField(max_length=20,
+    choices = event_choices,
+    default = "Monthly Event"
+    )
+
 
     def __str__(self):
         return self.event_name + " "

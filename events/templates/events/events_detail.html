@@ -10,6 +10,7 @@
   <div class="data p-2">
     <p class="info" style="margin-top: 20px">Start Date: <b>{{event.date}}</b></p>
     <p class="info">Start Time: <b>{{event.time}}</b></p>
+    <p class="info">Catagory: <b>{{event.catagory}}</b></p>
     <p class="info">Organizer(s): <b>{{event.orgzer}}</b></p>
     {% if event.location %}
     <p>Will be held at(/in): <b>{{event.location}}</b></p>
@@ -19,11 +20,12 @@
     <p>Winner(s): <b>{{event.winners | safe | linebreaks }}</b></p>
     {% endif %}
 
-    {% if event.reg %}    
+    {% if event.reg %}
     <a href="{{event.reg}}">Event Link</a>
     {% endif %}
 
-</div>
+
+  </div>
 </div>
 
 {% endblock %}

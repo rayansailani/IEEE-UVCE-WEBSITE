@@ -2,6 +2,13 @@ from django import forms
 from . import models
 from .models import Event, Update
 
+event_choices = (
+        ("Monthly Event", "Monthly Event"),
+        ("Elite Event", "Elite Event"),
+        ("General Event", "General Event"),
+        ("Workshop", "Workshop"),
+        ("Webinar/Tech Talk", "Webinar/Tech Talk")
+)
 
 class CreateEvent(forms.ModelForm):
     event_name = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
@@ -58,12 +65,16 @@ class CreateEvent(forms.ModelForm):
     #     'class': 'form-control',
     #     'placeholder': 'Winners of the event (only to be update once '
     # }))
-
+    catagory = forms.ChoiceField(choices = event_choices,  widget = forms.Select(
+        attrs={
+            "class":"form-control"
+        }
+    ))
     class Meta:
 
         model = models.Event
         fields = ['event_name', 'slug', 'date', 'time', 'location',
-                  'reg', 'description', 'orgzer', 'remember_link']
+                  'reg', 'description', 'orgzer', 'catagory', 'remember_link']
 
 
 class CreateUpdateForm(forms.ModelForm):
@@ -151,11 +162,16 @@ class UpdateBlogPostForm(forms.ModelForm):
             'type': 'checkbox',
         }
     ), help_text="Do you want the event link to be display after the event date is over?")
+    catagory = forms.ChoiceField(choices = event_choices,  widget = forms.Select(
+        attrs={
+            "class":"form-control"
+        }
+    ))
 
     class Meta:
         model = Event
         fields = ['event_name',  'date', 'time', 'location', 'slug',
-                  'reg', 'description', 'orgzer', 'winners', 'remember_link']
+                  'reg', 'description', 'orgzer','catagory', 'winners', 'remember_link']
 
     def save(self, commit=True):
         event = self.instance
@@ -168,6 +184,7 @@ class UpdateBlogPostForm(forms.ModelForm):
         event.winners = self.cleaned_data['winners']
         event.orgzer = self.cleaned_data['orgzer']
         event.slug = self.cleaned_data['slug']
+        event.catagory = self.cleaned_data["catagory"]
 
         # if self.cleaned_data['poster']:
         #     event.poster = self.cleaned_data['poster']

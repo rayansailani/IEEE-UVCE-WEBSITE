@@ -137,7 +137,7 @@ def edit_view(request, slug):
             if form.is_valid():
                 obj = form.save(commit=False)
                 obj.save()
-                context['success_message'] = 'Updated '
+                context['success_message'] = 'Updated'
                 event = obj
                 return redirect('articles:dashboard')
         else:
@@ -153,6 +153,7 @@ def edit_view(request, slug):
                     'description': event.description,
                     'slug': event.slug,
                     'remember_link': event.remember_link,
+                    'catagory':event.catagory,
                 }
             )
         return render(request, 'events/edit.html', {'form': form})
