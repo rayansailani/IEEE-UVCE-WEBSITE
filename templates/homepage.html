@@ -281,7 +281,7 @@
 
             <ul style="list-style-type: none;">
                 <li>
-                    <b>{{ update.title}}</b>: {{ update.Update}}
+                    <b>{{ update.title}}</b>: {{ update.Update | safe |linebreaks}}
                 </li>
             </ul>
 
