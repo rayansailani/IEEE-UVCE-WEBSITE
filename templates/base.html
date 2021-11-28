@@ -132,8 +132,9 @@
   <!-- End Header -->
 
 
-
+  {% autoescape off %}
   {% block content %} {% endblock %}
+  {% endautoescape %}
   <a href="#" class="back-to-top"><i class="icofont-arrow-up"></i></a>
   {% block footer %}
   <!-- Footer -->
