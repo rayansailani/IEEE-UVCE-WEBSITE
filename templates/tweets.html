@@ -5,9 +5,38 @@
     <div class="section-title">
         <h2>Rewards Programme</h2>
     </div>
-    {% for tweet in tweets %}
-    <p>{{tweet.full_text}}</p>
-    {% endfor %}
+    <div class="tw_flex">
+        {% for tweet in tweets %}
+            <p data-aos="fade-up" class="tw_para">{{tweet.full_text}}</p>
+        {% endfor %}
+    </div>
 </section>
-
+<!-- Style part -->
+<style>
+.tw_flex
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tw_para
+{
+    padding:25px;
+    text-align:left;
+    width:70vw;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top:20px;
+    box-shadow: 8px 8px rgb(27, 49, 75);
+}
+@media screen and (max-width:480px)
+{
+    .tw_para
+    {
+        width:80vw;
+    }
+}
+</style>
+<!-- End of style part -->
 {% endblock %}
