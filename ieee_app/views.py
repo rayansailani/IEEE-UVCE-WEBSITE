@@ -38,7 +38,7 @@ def global_events_view(request):
     access_token_secret= 'lhSZdeH6zNTCVdq6ybwt4ezEEfp4gtY6Q63KhiAkUoJAt'
     auth = tw.OAuthHandler(consumer_key, consumer_secret)
     api = tw.API(auth, wait_on_rate_limit=True)
-    tweets = api.user_timeline(screen_name = "ieee_section", count=20,include_rts = True, tweet_mode = 'extended')
+    tweets = api.user_timeline(screen_name = "ieee_section", count=10,include_rts = True, tweet_mode = 'extended')
     context = {"tweets": tweets}
     return render(request, "tweets.html", context)
 

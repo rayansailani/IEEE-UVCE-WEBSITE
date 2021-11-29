@@ -54,9 +54,12 @@
     <!-- <a href="javascript:;">Accounts </a> -->
 
     <ul>
-
-
         <li class="drop-down">
+            {% if updates %}
+        <li>
+            <a href="#updates">Updates</a>
+        </li>
+        {% endif %}
         <li>
             <a href="#fests">Flagship Events</a>
         </li>

@@ -3,40 +3,46 @@
 {% block content %}
 <section id="skills" class="skills" style="position: relative;">
     <div class="section-title">
-        <h2>Rewards Programme</h2>
+        <h2>IEEE Bangalore Section Updates</h2>
     </div>
     <div class="tw_flex">
         {% for tweet in tweets %}
-            <p data-aos="fade-up" class="tw_para">{{tweet.full_text}}</p>
+        <!-- <p data-aos="fade-up" style="background: red !important;">{{tweet.full_text | linebreaks}}</p> -->
+        <div class="tw_para">
+            <p>{{tweet.full_text|linebreaks|urlize}}</p>
+            <p>{{tweet.created_at}}</p>
+        </div>
         {% endfor %}
+        <div class="see-more-button">
+            <a href="https://twitter.com/ieee_section" target="_blank" class="btn btn-info btn-block my-4"
+                style="background-color: #37517e;">See more</a>
+        </div>
     </div>
 </section>
 <!-- Style part -->
 <style>
-.tw_flex
-{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.tw_para
-{
-    padding:25px;
-    text-align:left;
-    width:70vw;
-    border: 2px solid gray;
-    border-radius: 5px;
-    margin-top:20px;
-    box-shadow: 8px 8px rgb(27, 49, 75);
-}
-@media screen and (max-width:480px)
-{
-    .tw_para
-    {
-        width:80vw;
+    .tw_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-}
+
+    .tw_para {
+        padding: 25px;
+        text-align: left;
+        width: 70vw;
+        border: 2px solid gray;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: 8px 8px rgb(27, 49, 75);
+    }
+
+    @media screen and (max-width:480px) {
+        .tw_para {
+            width: 80vw;
+        }
+    }
 </style>
 <!-- End of style part -->
 {% endblock %}

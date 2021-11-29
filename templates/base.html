@@ -54,65 +54,79 @@
             <a href={% url 'covid' %}>COVID Awareness</a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="{% url 'articles:list' %}">Events</a>
-          </li>
-          <li>
-            <a href="{% url 'calendar' %}">Calendar</a>
-          </li>
-
-
-          <li>
-            <a href="{% url 'rewards' %}">Rewards Programme</a>
-          </li>
-          <li>
-            <a href="{% url 'post' %}">Gallery</a>
-          </li>
-
-          <li>
-            <a href="{% url 'team' %}">Team</a>
-          </li>
-          {% if user.is_authenticated %}
+          </li> -->
           <li class="drop-down ">
+            <a href="javascript:;">Events</a>
+            <ul>
+              <li class="drop-down">
+              <li>
+                <a href={% url 'articles:list' %}>IEEE UVCE Events</a>
+              </li>
+              <li>
+                <a href={% url 'global_events' %}>IEEE Global Events and updates</a>
+              </li>
+          </li>
 
+        </ul>
+        </li>
+        <li>
+          <a href="{% url 'calendar' %}">Calendar</a>
+        </li>
+
+
+        <li>
+          <a href="{% url 'rewards' %}">Rewards Programme</a>
+        </li>
+        <li>
+          <a href="{% url 'post' %}">Gallery</a>
+        </li>
+
+        <li>
+          <a href="{% url 'team' %}">Team</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="drop-down ">
+
+          {% if user.is_authenticated %}
+
+          <a href="javascript:;">{{request.user.username}}</a>
+          {% else %}
+          {% endif %}
+          <ul>
             {% if user.is_authenticated %}
 
-            <a href="javascript:;">{{request.user.username}}</a>
-            {% else %}
-            {% endif %}
-            <ul>
-              {% if user.is_authenticated %}
-
-              <li class="drop-down">
+            <li class="drop-down">
+              {% if request.user.is_sig_head %}
+              <a href="#">Utilities</a>
+              <ul>
                 {% if request.user.is_sig_head %}
-                <a href="#">Utilities</a>
-                <ul>
-                  {% if request.user.is_sig_head %}
-                  <li>
-                    <a href="{% url 'articles:dashboard' %}">SIG dashboard</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'articles:create' %}">register an event</a>
-                  </li>
-                  <li>
-                    <a href="{% url 'articles:update' %}">create an anouncement</a>
-                  </li>
-                  <!-- <li>
+                <li>
+                  <a href="{% url 'articles:dashboard' %}">SIG dashboard</a>
+                </li>
+                <li>
+                  <a href="{% url 'articles:create' %}">register an event</a>
+                </li>
+                <li>
+                  <a href="{% url 'articles:update' %}">create an anouncement</a>
+                </li>
+                <!-- <li>
                     <a href="{% url 'createPost' %}">Add image(s) to Gallery</a>
                   </li> -->
 
-                  {% endif %}
-                </ul>
                 {% endif %}
-              <li>
-                <a href="{% url 'articles:s_dashboard' %}">User Details</a>
-              </li>
-          </li>
-          <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
-          {% else %}
-          <li><a href="{% url 'accounts:login' %}">Login</a></li>
-          <li><a href="{% url 'accounts:register' %}">Register</a></li>
-          {% endif %}
+              </ul>
+              {% endif %}
+            <li>
+              <a href="{% url 'articles:s_dashboard' %}">User Details</a>
+            </li>
+        </li>
+        <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'accounts:login' %}">Login</a></li>
+        <li><a href="{% url 'accounts:register' %}">Register</a></li>
+        {% endif %}
         </ul>
         </li>
         {% endif %}
