@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+{% for info in tweet_info %}
 <section id="skills" class="skills" style="position: relative;">
     <div class="section-title">
-        <h2>IEEE Bangalore Section Updates</h2>
+        <h2>{{info.name}}</h2>
+        <p>@{{info.handle}}</p>
     </div>
     <div class="tw_flex">
-        {% for tweet in tweets %}
+        {% for tweet in info.tweets %}
         <!-- <p data-aos="fade-up" style="background: red !important;">{{tweet.full_text | linebreaks}}</p> -->
         <div class="tw_para">
             <p>{{tweet.full_text|linebreaks|urlize}}</p>
@@ -14,11 +17,13 @@
         </div>
         {% endfor %}
         <div class="see-more-button">
-            <a href="https://twitter.com/ieee_section" target="_blank" class="btn btn-info btn-block my-4"
+            <a href="{{info.more}}" target="_blank" class="btn btn-info btn-block my-4"
                 style="background-color: #37517e;">See more</a>
         </div>
     </div>
 </section>
+{% endfor %}
+
 <!-- Style part -->
 <style>
     .tw_flex {
