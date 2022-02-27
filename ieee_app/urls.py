@@ -8,7 +8,7 @@ from django.conf import settings
 from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="admin_link"),
     path('events/', include('events.urls')),
     path('accounts/', include('accounts.urls')),
     path('calendar/', include('cals.urls')),
