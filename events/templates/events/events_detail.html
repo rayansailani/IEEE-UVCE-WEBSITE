@@ -2,32 +2,58 @@
 
 <section id="skills" class="skills" data-aos="fade-up">
   <div class="section-title">
-    <h2>{{ event.event_name }}</h2>
+    <h2 id="event-name">{{ event.event_name }}</h2>
   </div>
 </section>
 <div class="container" data-aos="fade-up">
 
   <div class="data p-2">
-    <p class="info" style="margin-top: 20px">Start Date: <b>{{event.date}}</b></p>
-    <p class="info">Start Time: <b>{{event.time}}</b></p>
+    <p class="info" style="margin-top: 20px">Start Date: <b id="event-date">{{event.date}}</b></p>
+    <p class="info">Start Time: <b id="event-time">{{event.time}}</b></p>
     {% if event.catagory|length > 2 %}
-    <p class="info">Catagory: <b>{{event.catagory}}</b></p>
+    <p class="info">Catagory: <b id="event-category">{{event.catagory}}</b></p>
     {% endif %}
-    <p class="info">Organizer(s): <b>{{event.orgzer}}</b></p>
+    <p class="info">Organizer(s): <b id="event-org">{{event.orgzer}}</b></p>
     {% if event.location %}
-    <p>Will be held at(/in): <b>{{event.location}}</b></p>
+    <p>Will be held at(/in): <b id="event-location">{{event.location}}</b></p>
     {% endif %}
-    <p>Description: <b>{{event.description | safe | linebreaks}}</b></p>
+    <p>Description: <b id="event-desc">{{event.description | safe | linebreaks}}</b></p>
     {% if event.winners != 'Not Yet Decided' %}
     <p>Winner(s): <b>{{event.winners | safe | linebreaks }}</b></p>
     {% endif %}
 
     {% if event.reg %}
-    <a href="{{event.reg}}">Event Link</a>
+    <a id="event-link" href="{{event.reg}}">Event Link</a>
+    {% endif %}
+
+    {% if request.user.is_sig_head %}
+    <button class="btn btn-info btn-block my-4" style="background-color: #37517e;max-width:45%;margin:auto;"
+      onclick="handleCopy()">Copy Event Details</button>
     {% endif %}
 
 
   </div>
 </div>
+<script>
+  function handleCopy() {
+    console.log("Text is copied");
+    copiedText =
+
+      `Website Description for ${document.getElementById('event-name').innerHTML}
+    
+Event Name: ${document.getElementById('event-name').innerHTML}
+
+Start Date: ${document.getElementById('event-date').innerHTML}
+
+Organizer(s): ${document.getElementById('event-org').innerHTML}
+
+Will be held at(/in): ${document.getElementById('event-location').innerHTML}
+
+Description: ${document.getElementById('event-desc').innerHTML}
+
+Event link: ${document.getElementById('event-link').href} `;
+    navigator.clipboard.writeText(copiedText);
+  }
+</script>
 
 {% endblock %}
