@@ -20,11 +20,11 @@
     </h4>
     <div class="profile-details">
       <ul>
-        {% if request.user.is_admin %}
-        <!-- <li>
-          <a href="{% url 'admin_link' %}">Admin Page</a>
-        </li> -->
-        {% endif %}
+        <!-- {% if request.user.is_admin %}
+        <li>
+          <a href="#">Admin Page</a>
+        </li>
+        {% endif %} -->
         <li>
           <a href="{% url 'articles:create' %}"></i> Create an Event</a>
         </li>
