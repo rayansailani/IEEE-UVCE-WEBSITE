@@ -86,7 +86,7 @@
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
 
                 <img src="{% static 'img/head-500-new.webp' %}"
-                    srcset="{% static 'img/head-500-new.webp' %} 500w, {% static 'img/head-1000-new.webp' %} 1000w"
+                    srcset="{% static 'img/head-500-new.webp' %} 500w, {% static 'img/newteam.webp' %} 1000w"
                     class="img-fluid animated" alt="" />
 
             </div>
@@ -199,7 +199,7 @@
     </div>
     <hr>
     <div class="footer-copyright text-center py-3" data-aos="fade-up">
-        <h5><a href="mailto:mohithvermavs@ieee.org"><i class="icofont-envelope"></i> Mohith Verma V S</a></h5>
+        <h5><a href="mailto:mohithvarmavs@ieee.org"><i class="icofont-envelope"></i> Mohith Varma V S</a></h5>
         <h6><a target="_blank"
                 href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
                     class="icofont-google-map"></i>
@@ -377,6 +377,8 @@
         </div>
         <div style="display:flex; flex-direction:column;justify-content:center;align-items:center;">
             <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
+                data-toggle="modal" data-target="#myModal00">Student Activities Committee (SAC)</a>
+            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
                 data-toggle="modal" data-target="#myModal9">Women In Engineering (WIE)</a>
             <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
                 data-toggle="modal" data-target="#myModal2">Computer Society (CS)</a>
@@ -396,6 +398,31 @@
                 data-toggle="modal" data-target="#myModal7">Nirman</a>
             <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
                 data-toggle="modal" data-target="#myModal4">Literary Club</a>
+        </div>
+    </div>
+    <div id="myModal00" class="modal fade" role="dialog" style="z-index:99999999999999999">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" style="text-align: center;">Student Activities Committee (SAC) </h4>
+                </div>
+                <img loading="lazy" src="{% static 'img/sig/SAC.png' %}" style="max-width: 100%;" alt="none">
+                <div class="modal-body">
+                    <p>Student Activities Committee (SAC) is a committee under IEEE UVCE that
+                         is responsible for student programs and benefits. Industrial visits are 
+                         initiated by SAC to expose the students to real world industrial practises. 
+                         Additionally, SAC facilitates communication between various sections and 
+                         councils of IEEE to collaborate and coordinate activites.
+                         It also functions as a body that bridges the gap between IEEE UVCE and IEEE Bangalore Section.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
         </div>
     </div>
     <div id="myModal1" class="modal fade" role="dialog" style="z-index:99999999999999999">
@@ -460,7 +487,7 @@
                 </div>
                 <img loading="lazy" src="{% static 'img/sig/NB.png' %}" style="max-width: 100%;" alt="none">
                 <div class="modal-body">
-                    <p>Nirman is the newest SIG of IEEE UVCE. IEEE UVCE Nirman's primary aim is to keep all Civil
+                    <p>Nirman SIG was inaugrated on June 2021. IEEE UVCE Nirman's primary aim is to keep all Civil
                         Engineering enthusiasts of UVCE technically strong. It conducts webinars, workshops and events
                         related to important topics for the students to gain good experience and knowledge. It is the
                         platform where students get a chance to test their skill and ability in the field.</p>
