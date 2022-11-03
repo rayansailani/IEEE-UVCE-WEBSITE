@@ -50,13 +50,16 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           {% block home %} {% endblock %}
-          <li>
+          {% comment %}  <li>
             <a href={% url 'covid' %}>COVID Awareness</a>
-          </li>
+          </li> {% endcomment %}
 
           <!-- <li>
             <a href="{% url 'articles:list' %}">Events</a>
           </li> -->
+          <li>
+            <a href="{% url 'membershipBenefits' %}">Membership benefits</a>
+          </li>
           <li class="drop-down ">
             <a href="javascript:;">Events</a>
             <ul>
@@ -71,6 +74,7 @@
 
         </ul>
         </li>
+        
         <li>
           <a href="{% url 'calendar' %}">Calendar</a>
         </li>
@@ -86,6 +90,18 @@
         <li>
           <a href="{% url 'team' %}">Team</a>
         </li>
+       
+        {% comment %} <li class="drop-down ">
+          <a href="javascript:;">IEEE</a>
+          <ul>
+            <li class="drop-down">
+            <li>
+              <a href="https://ieeextreme.org/" target="_blank" rel="nopener noreferrer">IEEE Xtreme</a>
+            </li>
+            <li>
+              <a href="https://www.ieee.org/" target="_blank" rel="nopener noreferrer">IEEE website</a>
+            </li>
+        </li> {% endcomment %}
         {% if user.is_authenticated %}
         <li class="drop-down ">
 

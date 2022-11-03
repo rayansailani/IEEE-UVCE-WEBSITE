@@ -53,18 +53,18 @@
         </li>
         <li><a href="#contacts">Contact</a></li>
 </li>
-
 </ul>
 </li>
-
-
-
-
 {% endblock %}
 {% load static %}
 {% block hero %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center" style="height:100vh;">
+<div id="hero" class="d-flex align-items-center" style="background-image:url('https://images.app.goo.gl/WLtCCu16tMWM1MMh7')">
+{% comment %}    
+    <video autoplay loop muted playes-inline>
+        <source src="video.mp4" type="video/mp4">
+        </video {% endcomment %}
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
@@ -95,7 +95,7 @@
 
     </div>
 
-</section>
+</div>
 <div class="modal fade" id="messageModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
