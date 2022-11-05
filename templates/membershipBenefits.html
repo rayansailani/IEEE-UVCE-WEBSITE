@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-<style>
-</style>
+{% comment %} <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> {% endcomment %}
 <section id="skills" class="skills" style="position: relative;">
     <div class="section-title">
         <h2>Membership Benefits</h2>
@@ -61,12 +59,18 @@
     </div>
 
     <br/><br/><br/>
-   <div clas="container">
+
+    <div class="container" style="font-size:1.06rem;">
+        <p class="p-3">IEEE UVCE Membership Brochure: <a href="https://drive.google.com/file/d/1QMveH5e-6H-tOFFjjqDnk8aDN3EbjOF3/view?usp=sharing" target="_blank">Membership Brochure</a></p>
+    </div> 
+   {% comment %} <div clas="container">
         <div align="center" style="background-color:white; width:100%; height:660px">
          <embed style="width:70%; height:100% "  src="{% static 'img/pdfs/broucher.pdf' %}"   type="application/pdf"> 
         </div> 
-    </div>   
+    </div>   {% endcomment %}
 </section>
+
+
 
 
 <style>
@@ -75,5 +79,7 @@
 }
 
 </style>
+
+
 
 {% endblock %}
