@@ -21,6 +21,7 @@ urlpatterns = [
     path('covid-awareness', views.covid_page, name="covid"),
      path('membershipBenefits', views.membershipBenefits, name="membershipBenefits"),
     path('global', views.global_events_view, name="global_events"),
+    path('ieeextreme', views.ieeextreme, name="ieeextreme"),
 
     # for resetting password functionality
     path('reset_password/',
