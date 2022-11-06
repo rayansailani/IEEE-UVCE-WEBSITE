@@ -28,17 +28,8 @@ def covid_page(request):
     return render(request, 'covid.html')
 
 @cache_control(no_cache=True)
-def membershipBenefits(request):
-    return render(request, 'membershipBenefits.html')
-
-@cache_control(no_cache=True)
 def rewards_1_view(request):
     return render(request, 'reward_1.html')
-
-@cache_control(no_cache=True)
-def ieeextreme(request):
-    return render(request, 'ieeextreme.html')
-
 
 def global_events_view(request):
     consumer_key= 'cA5ClFLWtmGRTIlwTuSCKPebZ'
@@ -74,6 +65,4 @@ def global_events_view(request):
     ]
     context = {"tweet_info":tweet_information }
     return render(request, "tweets.html", context)
-
-
 
