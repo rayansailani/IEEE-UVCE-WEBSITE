@@ -5,6 +5,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  
 }
 
 a {
@@ -2083,4 +2084,21 @@ section {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+/* Gallery */
+.gall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 10px;
+  border-color: black;
+  padding: 15px;
+  border-width: 2px;
+}
+.gall img {
+  width: 100%;
+  display: block;
+  transition: all 100ms ease-out;
+}
+.gall img:hover {
+  transform: scale(1.1);
 }

@@ -5,6 +5,27 @@
 {% endblock %}
 {% block styling %}
 <style>
+    /* .gall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto-fit));
+  gap: 20px;
+  padding: 15px;
+}
+.gall img {
+    min-height: 200px;
+    height: 50%;
+  width: 100%;
+  display: block;  
+  background: white;
+  transition: all 100ms ease-out;
+}
+.gall  :hover
+{
+    transform: scale(1.1);  
+}
+
+ */
+
     .image-banner {
         background-image: url("{% static 'img/ieeebanner-1000.webp' %}");
     }
@@ -53,19 +74,16 @@
         </li>
         <li><a href="#contacts">Contact</a></li>
 </li>
-
 </ul>
 </li>
-
-
-
-
+ 
+        
 {% endblock %}
 {% load static %}
 {% block hero %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center" style="height:100vh;">
-    <div class="container">
+<section id="hero" class="d-flex align-items-center">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                 data-aos="fade-up" data-aos-delay="200">
@@ -86,7 +104,7 @@
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
 
                 <img src="{% static 'img/head-500-new.webp' %}"
-                    srcset="{% static 'img/head-500-new.webp' %} 500w, {% static 'img/head-1000-new.webp' %} 1000w"
+                    srcset="{% static 'img/head-500-new.webp' %} 500w, {% static 'img/newteam.webp' %} 1000w"
                     class="img-fluid animated" alt="" />
 
             </div>
@@ -95,6 +113,7 @@
 
     </div>
 
+</div>
 </section>
 <div class="modal fade" id="messageModal">
     <div class="modal-dialog modal-lg">
@@ -137,13 +156,81 @@
 {% endblock %}
 {% block footer %}
 <div class="" id="contacts"></div>
+<section id="yt" class="yt">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Highlights</h2>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="margin-bottom:60px;">
+                <iframe width="100%" height="120%" src="https://www.youtube.com/embed/v=laLw0A34Kjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+            <div class="col-sm-4" style="margin-bottom:60px;">
+                <iframe width="100%" height="120%" src="https://www.youtube.com/embed/yvmJXZ_jwq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+            <div class="col-sm-4" style="margin-bottom:60px;">
+                <iframe width="100%" height="120%" src="https://www.youtube.com/embed/GwTBqxMZHQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+        </div>
+        </div>
+</section>
+<div id="myModal150" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" style="text-align: center;">Web Masters</h4>
+
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/SAC.png' %}" style="max-width: 100%;" alt="none">
+            <div class="modal-body">
+                <p>Student Activities Committee (SAC) is a committee under IEEE UVCE that
+                     is responsible for student programs and benefits. Industrial visits are 
+                     initiated by SAC to expose the students to real world industrial practises. 
+                     Additionally, SAC facilitates communication between various sections and 
+                     councils of IEEE to collaborate and coordinate activites.
+                     It also functions as a body that bridges the gap between IEEE UVCE and IEEE Bangalore Section.</p>
+            </div> -->
+            <div style="text-align: center;">
+            <a href="mailto:karthikkssuresh@gmail.com">Karthik K S</a>
+            <br>
+            <a href="mailto:keerthireddync@gmail.com">Keerthi N C</a>
+            <br>
+    
+            <a href="mailto:prajwal.upoojari4@gmail.com">Prajwal Poojari</a>
+            <br>
+            <a href="mailto:knabhishek02@gmail.com">Abhishek K N</a>
+            <br>
+            <a href="mailto:kondauma95@gmail.com">K Uma Maheshwari</a>
+            <br>
+    
+            <a href="mailto:vishalvinayram5432@gmail.com">Vishal Vinay Ram</a>
+            <br>
+            <br>
+            </div>
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <br>
+
+
+    </div>
+</div>
 <section id="contact" class="contact">
+
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Contact</h2>
 
         </div>
+        
 
 
         <div class="info">
@@ -199,22 +286,17 @@
     </div>
     <hr>
     <div class="footer-copyright text-center py-3" data-aos="fade-up">
-        <h5><a href="mailto:r.pruthviraj786@ieee.org"><i class="icofont-envelope"></i> Pruthvi Raj R</a></h5>
+        <h5><a href="mailto:mohithvarmavs@ieee.org"><i class="icofont-envelope"></i> Mohith Varma V S</a></h5>
         <h6><a target="_blank"
                 href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
                     class="icofont-google-map"></i>
                 UVCE, K.R Circle, B.R Ambedkar Veedhi, Bengaluru </a></h6>
-        Web Masters: <br>
-        <a href="mailto:rayansailani123.com">Mohammed Rayan Sailani</a>
-        <br>
-        <a href="mailto:karthikkssuresh@gmail.com">Karthik K S</a>
-        <br>
-        <a href="mailto:keerthireddync@gmail.com"> Keerthi N C</a>
-        <br>
-
-        <a href="mailto:prajwal.upoojari4@gmail.com">Prajwal Poojari</a>
-        <br>
-        <br>
+                <a href="" type="submit" 
+                data-toggle="modal" data-target="#myModal150">            
+                Web Masters: 
+            </a>
+            <br>
+           
         © 2020 Copyright:
         <a href="{% url 'home_page' %}"> IEEE UVCE</a>
         <br>
@@ -302,7 +384,7 @@
                                 style="text-align: justify;">
                                 <p>
                                     IMPETUS is IEEE UVCE's National level Technical Extravaganza started in the year
-                                    2001. For twenty years now, it has been serving as a platform for the students to
+                                    2001. For twenty one years now, it has been serving as a platform for the students to
                                     showcase their skills and share their views. It brings together the brilliant minds,
                                     whose direction of thought has been streamlined by extensive knowledge, to compete
                                     in an arena marked by fight for creativity, excellence and innovation. Held on an
@@ -342,7 +424,7 @@
                                     conducted
                                     by IEEE UVCE Computer Society. The main task of the Hackathon is to create a Web or
                                     Android/iOS Application related to the problem domain which is given on the
-                                    spot. The problem domains given in the last 3 iterations were 'Building a platform
+                                    spot. The problem domains given in the last 4 iterations were 'Building a platform
                                     to aid women empowerment and safety', 'Building an E-commerce application' and 'Jobs
                                     for all: Effective management of unorganised labour post COVID-19'. The Hackathon
                                     sees about 200 participants from all over the country, come together to showcase
@@ -369,274 +451,308 @@
         <div class="section-title">
             <h2>Special Interest Groups</h2>
         </div>
-        <div style="display:flex; flex-direction:column;justify-content:center;align-items:center;">
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal9">Women In Engineering (WIE)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal2">Computer Society (CS)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal5">Power & Energy Society (PES)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal6">Power Electronics Society (PELS)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal10">Yantrik (Robotics Club)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal8">Software Development</a>
-            <a href="" class="btn btn-info btn-block my-2 sig-button" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal1">Art & Design</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal3">Special Interest Group on Humanitarian Technology(SIGHT)</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal7">Nirman</a>
-            <a href="" class="btn btn-info btn-block my-2" type="submit" style="background-color: #37517e"
-                data-toggle="modal" data-target="#myModal4">Literary Club</a>
+        <div class="gall">
+            <!-- <img src="../assets/img/compsoc.png"> -->
+            
+            
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal9"> <img src="{% static 'img/sig/WIE.webp' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal2"> <img src="{% static 'img/sig/CS.webp' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal5"> <img src= "{% static 'img/sig/PES.webp' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal6"><img src="{% static 'img/sig/pels.png' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal10"> <img src="{% static 'img/sig/yantrik.webp' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal8"><img src="{% static 'img/sig/sds.png' %}"></a>
+            <a href="" class=" btn-block my-2 sig-button" 
+                data-toggle="modal" data-target="#myModal1"><img src="{% static 'img/sig/artforum.png' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal3">            <img src="{% static 'img/sig/sight.webp' %}">
+            </a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal7"><img src="{% static 'img/sig/NB.png' %}"></a>
+            <a href="" class=" btn-block my-2" type="submit" 
+                data-toggle="modal" data-target="#myModal4"><img src="{% static 'img/sig/lit.png' %}"></a>
+
+
+            
         </div>
-    </div>
-    <div id="myModal1" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title" style="text-align: center;">Art & Design</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/Black.png' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>IEEE UVCE Art & Design SIG is an amalgamation of all things creative. It is aimed towards
-                        creating a platform for students interested in Graphic Design, Art and Video Editing. The main
-                        goal is to encourage students to express their creativity with no bounds to the medium involved.
-                        With all the posters, brochures, videos and any creative media released from the team, we aim to
-                        develop our abilities beyond a closed classroom.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal2" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Computer Society (CS)</h4>
-
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/CS.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Computer Society is one of the most prominent societies that comes under IEEE UVCE. It acts as a
-                        great platform for students of all branches to learn more and contribute to the computing world.
-                        Computer Society has been conducting many events since its inception which includes the Annual
-                        National level hackathon CodeFury, the monthly coding competition NCode and several workshops to
-                        kindle
-                        students' interest to update their knowledge on new upcoming technological advances and improve
-                        their programming skills as well.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal7" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Nirman</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/NB.png' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Nirman is the newest SIG of IEEE UVCE. IEEE UVCE Nirman's primary aim is to keep all Civil
-                        Engineering enthusiasts of UVCE technically strong. It conducts webinars, workshops and events
-                        related to important topics for the students to gain good experience and knowledge. It is the
-                        platform where students get a chance to test their skill and ability in the field.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal4" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Literary Club</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/LC.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Literary club functions as a part of IEEE UVCE with a motto of harnessing the linguistic skills.
-                        It conducts activities to develop communication and creative writing abilities of students. This
-                        club helps in enhancing the communication skills of students and helps them communicate their
-                        ideas and innovations in a clear and efficient way.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal5" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Power & Energy Society (PES)</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/PES.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Power and Energy Society is a new student chapter under IEEE UVCE, started in April 2019. The
-                        main aim of the Society is to strengthen the technical skills of interested students from all
-                        branches, but mainly concentrated on students of electronics and electrical branches. It
-                        conducts many technical events, talks and industrial visits. A monthly Electronics and
-                        Electrical Challenge Voltorb is also conducted, through which students can test their technical
-                        strengths.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal6" class="modal fade " role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Power Electronis Society(PELS)</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/PELS.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Power Electronics Society is a new chapter under IEEE UVCE, inaugurated in June 2021. The main
-                        aim of the Society is to strengthen the technical skills of the students in the field of Power
-                        Electronic Systems. We look forward to conduct webinars and workshops on topics related to power
-                        electronic systems, technologies and it's applications such as Fuel Cell Technology, Renewable
-                        Energy Systems.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal8" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Software Development</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/SD.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>The Software Development SIG previously the Web Development SIG was started in April 2017. This
-                        is the software tweaking pavilion of IEEE UVCE. It specializes in conducting software
-                        development related contests and workshops from IEEE UVCE. It strives to empower and build a
-                        community of aspiring developers.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal3" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Special Interest Group on Humanitarian Technology(SIGHT)</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/SIGHT.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>SIGHT is an ensemble in IEEE that focuses on projects that are beneficial to the society. It
-                        gives enthusiastic groups of engineers a platform to reach out to different sectors of people in
-                        different walks of life, thereby changing lives one at a time towards their better future by
-                        solving their everyday problems by providing a technology based solution.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal9" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Women in Engineering (WIE)</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/WIE.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>IEEE Women in Engineering (WIE) is a global network of IEEE members and volunteers dedicated to
-                        promoting women engineers and scientists, and inspiring girls around the world to follow their
-                        academic interests in a career in engineering and science. IEEE UVCE WIE is an Affinity group
-                        under IEEE UVCE. It's goal is to facilitate the recruitment and retention of women in technical
-                        disciplines globally. It envisions a vibrant community of IEEE women and men collectively using
-                        their diverse talents to innovate for the benefit of humanity.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="myModal10" class="modal fade" role="dialog" style="z-index:99999999999999999">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Yantrik (Robotics Club)</h4>
-                </div>
-                <img loading="lazy" src="{% static 'img/sig/yantrik.webp' %}" style="max-width: 100%;" alt="none">
-                <div class="modal-body">
-                    <p>Yantrik, the robotics club of IEEE UVCE was formed in 2005 to further the understanding of the
-                        field. Students from various discipline have collaborated to keep this club active for last 14
-                        years. With the wake of recent developments in technology, robotics predominates the important
-                        sectors and also demands a new approach. The club has shouldered several workshops, events and
-                        peer-to-peer training programs for teaching robotics to everyone who were curious and interested
-                        and intends to form a strong community of roboticists in UVCE. It commits to the fundamentals
-                        for rethinking the design and to build efficient robots with advanced capabilities.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <!-- </div> -->
+    
+    
 
 
 
 </section>
+<div id="myModal00" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" style="text-align: center;">Student Activities Committee (SAC) </h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/SAC.png' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Student Activities Committee (SAC) is a committee under IEEE UVCE that
+                     is responsible for student programs and benefits. Industrial visits are 
+                     initiated by SAC to expose the students to real world industrial practises. 
+                     Additionally, SAC facilitates communication between various sections and 
+                     councils of IEEE to collaborate and coordinate activites.
+                     It also functions as a body that bridges the gap between IEEE UVCE and IEEE Bangalore Section.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal1" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" style="text-align: center;">Art & Design</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/Black.png' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>IEEE UVCE Art & Design SIG is an amalgamation of all things creative. It is aimed towards
+                    creating a platform for students interested in Graphic Design, Art and Video Editing. The main
+                    goal is to encourage students to express their creativity with no bounds to the medium involved.
+                    With all the posters, brochures, videos and any creative media released from the team, we aim to
+                    develop our abilities beyond a closed classroom.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal2" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Computer Society (CS)</h4>
+
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/CS.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Computer Society is one of the most prominent societies that comes under IEEE UVCE. It acts as a
+                    great platform for students of all branches to learn more and contribute to the computing world.
+                    Computer Society has been conducting many events since its inception which includes the Annual
+                    National level hackathon CodeFury, the monthly coding competition NCode and several workshops to
+                    kindle
+                    students' interest to update their knowledge on new upcoming technological advances and improve
+                    their programming skills as well.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal7" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Nirman</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/NB.png' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Nirman SIG was inaugrated on June 2021. IEEE UVCE Nirman's primary aim is to keep all Civil
+                    Engineering enthusiasts of UVCE technically strong. It conducts webinars, workshops and events
+                    related to important topics for the students to gain good experience and knowledge. It is the
+                    platform where students get a chance to test their skill and ability in the field.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal4" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Literary Club</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/LC.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Literary club functions as a part of IEEE UVCE with a motto of harnessing the linguistic skills.
+                    It conducts activities to develop communication and creative writing abilities of students. This
+                    club helps in enhancing the communication skills of students and helps them communicate their
+                    ideas and innovations in a clear and efficient way.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal5" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Power & Energy Society (PES)</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/PES.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Power and Energy Society is a new student chapter under IEEE UVCE, started in April 2019. The
+                    main aim of the Society is to strengthen the technical skills of interested students from all
+                    branches, but mainly concentrated on students of electronics and electrical branches. It
+                    conducts many technical events, talks and industrial visits. A monthly Electronics and
+                    Electrical Challenge Voltorb is also conducted, through which students can test their technical
+                    strengths.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal6" class="modal fade " role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Power Electronis Society(PELS)</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/PELS.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Power Electronics Society is a new chapter under IEEE UVCE, inaugurated in June 2021. The main
+                    aim of the Society is to strengthen the technical skills of the students in the field of Power
+                    Electronic Systems. We look forward to conduct webinars and workshops on topics related to power
+                    electronic systems, technologies and it's applications such as Fuel Cell Technology, Renewable
+                    Energy Systems.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal8" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Software Development</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/SD.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>The Software Development SIG previously the Web Development SIG was started in April 2017. This
+                    is the software tweaking pavilion of IEEE UVCE. It specializes in conducting software
+                    development related contests and workshops from IEEE UVCE. It strives to empower and build a
+                    community of aspiring developers.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal3" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Special Interest Group on Humanitarian Technology (SIGHT)</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/SIGHT.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body" >
+                <p>SIGHT is an ensemble in IEEE that focuses on projects that are beneficial to the society. It
+                    gives enthusiastic groups of engineers a platform to reach out to different sectors of people in
+                    different walks of life, thereby changing lives one at a time towards their better future by
+                    solving their everyday problems by providing a technology based solution.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal9" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Women in Engineering (WIE)</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/WIE.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>IEEE Women in Engineering (WIE) is a global network of IEEE members and volunteers dedicated to
+                    promoting women engineers and scientists, and inspiring girls around the world to follow their
+                    academic interests in a career in engineering and science. IEEE UVCE WIE is an Affinity group
+                    under IEEE UVCE. It's goal is to facilitate the recruitment and retention of women in technical
+                    disciplines globally. It envisions a vibrant community of IEEE women and men collectively using
+                    their diverse talents to innovate for the benefit of humanity.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="myModal10" class="modal fade" role="dialog" style="z-index:99999999999999999">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Yantrik (Robotics Club)</h4>
+            </div>
+            <!-- <img loading="lazy" src="{% static 'img/sig/yantrik.webp' %}" style="max-width: 100%;" alt="none"> -->
+            <div class="modal-body">
+                <p>Yantrik, the robotics club of IEEE UVCE was formed in 2005 to further the understanding of the
+                    field. Students from various discipline have collaborated to keep this club active for last 17
+                    years. With the wake of recent developments in technology, robotics predominates the important
+                    sectors and also demands a new approach. The club has shouldered several workshops, events and
+                    peer-to-peer training programs for teaching robotics to everyone who were curious and interested
+                    and intends to form a strong community of roboticists in UVCE. It commits to the fundamentals
+                    for rethinking the design and to build efficient robots with advanced capabilities.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 <!-- End Skills Section -->
 
 <!-- ======= Awards Section ======= -->

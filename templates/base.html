@@ -6,7 +6,6 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
   <title>IEEE UVCE</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
@@ -35,7 +34,7 @@
 <body>
 
 
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" style="opacity: 0.9;">
     <div class="container d-flex align-items-center">
       <div class="col-lg-2 col-md-2 col-4 d-flex align-items-center justify-content-center">
         <a href="
@@ -50,13 +49,16 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           {% block home %} {% endblock %}
-          <li>
+          {% comment %}  <li>
             <a href={% url 'covid' %}>COVID Awareness</a>
-          </li>
+          </li> {% endcomment %}
 
           <!-- <li>
             <a href="{% url 'articles:list' %}">Events</a>
           </li> -->
+          <li>
+            <a href="{% url 'membershipBenefits' %}">Membership benefits</a>
+          </li>
           <li class="drop-down ">
             <a href="javascript:;">Events</a>
             <ul>
@@ -67,10 +69,15 @@
               <li>
                 <a href={% url 'global_events' %}>IEEE Global Events and updates</a>
               </li>
+              <li>
+                <a href="https://ieeextreme.org/" target="_blank" rel="nopener noreferrer">IEEE Xtreme</a>
+              </li>
+             
           </li>
 
         </ul>
         </li>
+        
         <li>
           <a href="{% url 'calendar' %}">Calendar</a>
         </li>
@@ -86,6 +93,22 @@
         <li>
           <a href="{% url 'team' %}">Team</a>
         </li>
+
+        <li>
+          <a href="https://www.ieee.org/" target="_blank" rel="nopener noreferrer">IEEE website</a>
+        </li>
+       
+        {% comment %} <li class="drop-down ">
+          <a href="javascript:;">IEEE</a>
+          <ul>
+            <li class="drop-down">
+            <li>
+              <a href="https://ieeextreme.org/" target="_blank" rel="nopener noreferrer">IEEE Xtreme</a>
+            </li>
+            <li>
+              <a href="https://www.ieee.org/" target="_blank" rel="nopener noreferrer">IEEE website</a>
+            </li>
+        </li> {% endcomment %}
         {% if user.is_authenticated %}
         <li class="drop-down ">
 
@@ -170,7 +193,7 @@
     <!-- Copyright -->
     <hr>
     <div class="footer-copyright text-center py-3" data-aos="fade-up">
-      <h5><a href="mailto:r.pruthviraj786@ieee.org"><i class="icofont-envelope"></i>Pruthvi Raj R</a></h5>
+      <h5><a href="mailto:mohithvarmavs@ieee.org"><i class="icofont-envelope"></i>Mohith Varma V S</a></h5>
       <h6><a target="_blank"
           href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
             class="icofont-google-map"></i>

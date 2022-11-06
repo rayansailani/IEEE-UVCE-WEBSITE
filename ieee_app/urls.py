@@ -1,6 +1,7 @@
 from django.contrib import admin
-from django.conf.urls import url
+# from django.conf.urls import url
 from django.urls import path, include
+from django.urls import re_path as url
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
@@ -18,7 +19,9 @@ urlpatterns = [
     path('register', views.reg_form, name="reg_form"),
     path('rewards', views.rewards_1_view, name="rewards"),
     path('covid-awareness', views.covid_page, name="covid"),
+     path('membershipBenefits', views.membershipBenefits, name="membershipBenefits"),
     path('global', views.global_events_view, name="global_events"),
+    path('ieeextreme', views.ieeextreme, name="ieeextreme"),
 
     # for resetting password functionality
     path('reset_password/',
