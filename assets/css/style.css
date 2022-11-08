@@ -412,6 +412,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  background-image: url("../img/sig/bg.gif");
   width: 100%;
   background: var(--background-blue);
   height: 100vh;
